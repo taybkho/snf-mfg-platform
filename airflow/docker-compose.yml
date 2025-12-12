@@ -1,0 +1,82 @@
+version: '3.8'
+
+x-airflow-common:
+  &airflow-common
+  image: apache/airflow:2.9.0
+
+  # Load Snowflake + other secrets from project-root .env (host path)
+  env_file:
+    - ../.env  
+
+  environment:
+    # Core Airflow config
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'False'
+    AIRFLOW__CORE__FERNET_KEY: 'VsjfQe-xE3aIMTsMr_4_jfgFtvy3TcCPJDbCEbGGTjs='
+    AIRFLOW__WEBSERVER__RBAC: 'True'
+
+    # Use Postgres metadata DB (required for LocalExecutor)
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+
+    # dbt profiles dir inside container
+    DBT_PROFILES_DIR: /opt/airflow/dbt_profiles
+
+    # Extra Python packages for Airflow image
+    _PIP_ADDITIONAL_REQUIREMENTS: >
+      pandas
+      snowflake-connector-python
+      dbt-core
+      dbt-snowflake
+      python-dotenv
+
+  volumes:
+    # Mount the entire project into /opt/airflow
+    - ..:/opt/airflow
+    # Optional: if you want DAGs specifically from airflow/dags
+    - ../airflow/dags:/opt/airflow/dags
+
+  user: "50000:0"
+  depends_on:
+    - postgres
+    - redis
+
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+
+  airflow-init:
+    <<: *airflow-common
+    command: bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true"
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: airflow webserver
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    depends_on:
+      - airflow-init
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: airflow scheduler
+    depends_on:
+      - airflow-init

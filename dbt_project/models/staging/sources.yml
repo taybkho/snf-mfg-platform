@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw manufacturing data loaded from source CSVs."
+    database: MFG_ACCELERATOR
+    schema: RAW
+
+    tables:
+      - name: materials
+        description: "Raw materials master data."
+      - name: batches
+        description: "Raw batch data at manufacturing sites."
+      - name: production_orders
+        description: "Raw production order data."

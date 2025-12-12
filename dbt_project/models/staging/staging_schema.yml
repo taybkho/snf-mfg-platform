@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_materials
+    description: "Staging view of materials with cleaned types and naming."
+    columns:
+      - name: material_id
+        description: "Business key of the material."
+        tests:
+          - not_null
+          - unique
+      - name: material_status
+        description: "Lifecycle status of the material."
+
+  - name: stg_batches
+    description: "Staging view of manufacturing batches."
+    columns:
+      - name: batch_id
+        description: "Business key of the batch."
+        tests:
+          - not_null
+          - unique
+      - name: material_id
+        description: "FK to stg_materials.material_id."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_materials')
+              field: material_id
+
+  - name: stg_production_orders
+    description: "Staging view of production orders."
+    columns:
+      - name: order_id
+        description: "Business key of the production order."
+        tests:
+          - not_null
+          - unique
+      - name: batch_id
+        description: "FK to stg_batches.batch_id."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_batches')
+              field: batch_id
+

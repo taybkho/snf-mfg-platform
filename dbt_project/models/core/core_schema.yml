@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: core_materials
+    description: "Core material dimension with basic lifecycle attributes."
+    columns:
+      - name: material_id
+        description: "Business key of the material."
+        tests:
+          - not_null
+          - unique
+      - name: is_active_material
+        description: "Flag indicating if the material is active (1) or not (0)."
+
+  - name: core_batches
+    description: "Core batch entity enriched with material attributes and expiry metrics."
+    columns:
+      - name: batch_id
+        description: "Business key of the batch."
+        tests:
+          - not_null
+          - unique
+      - name: material_id
+        description: "FK to core_materials.material_id."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('core_materials')
+              field: material_id
+      - name: is_expired
+        description: "Flag indicating if the batch is expired as of today."
+
+  - name: fct_production_orders
+    description: "Fact table combining production orders with batch and material context, including timing metrics."
+    columns:
+      - name: order_id
+        description: "Business key of the production order."
+        tests:
+          - not_null
+          - unique
+      - name: batch_id
+        description: "FK to core_batches.batch_id."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('core_batches')
+              field: batch_id
+      - name: is_late
+        description: "Flag indicating if the order finished after the planned_end_date."
+      - name: is_completed
+        description: "Flag indicating if the order is completed."

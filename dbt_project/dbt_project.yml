@@ -1,0 +1,25 @@
+name: 'mfg_accelerator'
+version: '1.0.0'
+config-version: 2
+
+# This must match the profile name in profiles.yml (we'll create that next)
+profile: 'mfg_accelerator'
+
+# Where dbt should look for models, seeds, snapshots, etc.
+model-paths: ['models']
+seed-paths: ['seeds']
+snapshot-paths: ['snapshots']
+test-paths: ['tests']
+
+# We'll keep things simple for now
+models:
+  mfg_accelerator:
+    # Default schema for all models = ANALYTICS
+    +schema: analytics
+
+    staging:
+      +materialized: view  # staging models are usually views
+    core:
+      +materialized: table # core layer can be tables
+    marts:
+      +materialized: table # business-facing marts are tables

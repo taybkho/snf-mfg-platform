@@ -1,0 +1,50 @@
+[2025-12-11T11:09:19.446+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-11T11:09:19.489+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_accelerator_pipeline.dbt_run_all manual__2025-12-11T11:03:49.652607+00:00 [queued]>
+[2025-12-11T11:09:19.500+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_accelerator_pipeline.dbt_run_all manual__2025-12-11T11:03:49.652607+00:00 [queued]>
+[2025-12-11T11:09:19.501+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2025-12-11T11:09:19.518+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run_all> on 2025-12-11 11:03:49.652607+00:00
+[2025-12-11T11:09:19.527+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_accelerator_pipeline', 'dbt_run_all', 'manual__2025-12-11T11:03:49.652607+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/mfg_pipeline.py', '--cfg-path', '/tmp/tmpwlhd71bq']
+[2025-12-11T11:09:19.532+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=691) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-11T11:09:19.532+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask dbt_run_all
+[2025-12-11T11:09:19.533+0000] {standard_task_runner.py:63} INFO - Started process 692 to run task
+[2025-12-11T11:09:19.603+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_accelerator_pipeline.dbt_run_all manual__2025-12-11T11:03:49.652607+00:00 [running]> on host f87337c16ca9
+[2025-12-11T11:09:19.700+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='mfg_accelerator_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run_all' AIRFLOW_CTX_EXECUTION_DATE='2025-12-11T11:03:49.652607+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-11T11:03:49.652607+00:00'
+[2025-12-11T11:09:19.701+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-11T11:09:19.720+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-11T11:09:19.721+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run']
+[2025-12-11T11:09:19.730+0000] {subprocess.py:86} INFO - Output:
+[2025-12-11T11:09:22.467+0000] {subprocess.py:93} INFO - [0m11:09:22  Running with dbt=1.10.15
+[2025-12-11T11:09:23.362+0000] {subprocess.py:93} INFO - [0m11:09:23   adapter: Invalid profile: 'user' is a required property.
+[2025-12-11T11:09:23.583+0000] {subprocess.py:93} INFO - [0m11:09:23  Registered adapter: snowflake=1.10.4
+[2025-12-11T11:09:24.307+0000] {subprocess.py:93} INFO - [0m11:09:24  Found 8 models, 24 data tests, 3 sources, 504 macros
+[2025-12-11T11:09:24.315+0000] {subprocess.py:93} INFO - [0m11:09:24
+[2025-12-11T11:09:24.317+0000] {subprocess.py:93} INFO - [0m11:09:24  Concurrency: 4 threads (target='dev')
+[2025-12-11T11:09:24.318+0000] {subprocess.py:93} INFO - [0m11:09:24
+[2025-12-11T11:09:24.394+0000] {subprocess.py:93} INFO - [0m11:09:24
+[2025-12-11T11:09:24.396+0000] {subprocess.py:93} INFO - [0m11:09:24  Finished running  in 0 hours 0 minutes and 0.07 seconds (0.07s).
+[2025-12-11T11:09:24.397+0000] {subprocess.py:93} INFO - [0m11:09:24  Encountered an error:
+[2025-12-11T11:09:24.398+0000] {subprocess.py:93} INFO - Runtime Error
+[2025-12-11T11:09:24.398+0000] {subprocess.py:93} INFO -   Database error while listing schemas in database ""
+[2025-12-11T11:09:24.399+0000] {subprocess.py:93} INFO -   Database Error
+[2025-12-11T11:09:24.400+0000] {subprocess.py:93} INFO -     251005: User is empty, but it must be provided unless authenticator is one of PROGRAMMATIC_ACCESS_TOKEN, NO_AUTH, WORKLOAD_IDENTITY, OAUTH, PAT_WITH_EXTERNAL_SESSION.
+[2025-12-11T11:09:25.495+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-12-11T11:09:25.497+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-11T11:09:25.506+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-12-11T11:09:25.512+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=mfg_accelerator_pipeline, task_id=dbt_run_all, execution_date=20251211T110349, start_date=20251211T110919, end_date=20251211T110925
+[2025-12-11T11:09:25.528+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 6 for task dbt_run_all (Bash command failed. The command returned a non-zero exit code 2.; 692)
+[2025-12-11T11:09:25.575+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-12-11T11:09:25.601+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-11T11:09:25.637+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

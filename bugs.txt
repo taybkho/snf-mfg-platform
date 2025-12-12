@@ -1,0 +1,30 @@
+- ExecutionPolicy BUG :
+PS C:\Users\User\Desktop\Projects\platform> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+PS C:\Users\User\Desktop\Projects\platform> .\.venv\Scripts\activate
+
+"""
+-Snowflake-connector bug 
+
+# after installing Python 3.12 and making sure `python` points to it:
+py -0p
+py -3.12 --version (its working)
+rm -rf .venv   # Git Bash
+# or:
+rmdir /S /Q .venv   # PowerShell / CMD
+py -3.12 -m venv .venv (create new environement)
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install snowflake-connector-python
+"""
+
+Create a yml file :
+New-Item -Path "schema.yml" -ItemType "file"
+
+
+ Install Airflow for python 3.12 :
+ pip install "apache-airflow==2.9.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.9.1/constraints-3.12.txt"
+
+Fernet key bug : 
+Cant be planed text 
+
