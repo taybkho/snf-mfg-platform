@@ -3,64 +3,107 @@
 
 **Snowflake · dbt · Airflow · Docker**
 
-Production-inspired data platform simulating how a Digital Manufacturing team builds **reliable, testable, and observable pipelines** for analytics and AI workloads.
+Production-inspired manufacturing data platform demonstrating how **reliable, testable, and observable data pipelines** are built and evolved in real environments.
 
-## What this project shows
+This repository intentionally shows **design iteration**, starting from a simple ingestion model and evolving toward a production-grade, run-aware architecture.
 
-* End-to-end orchestration with **Airflow (Docker, LocalExecutor, Postgres metadata)**
-* Cloud data warehouse ingestion into **Snowflake**
-* **dbt** transformations with schema tests and layered modeling
-* Built-in **data quality monitoring and audit logging**
-* Production-style engineering practices: idempotency, config isolation, separation of concerns
+---
+
+## What this project demonstrates
+
+* End-to-end orchestration with **Airflow** (Docker, LocalExecutor, Postgres metadata)
+* Cloud data ingestion into **Snowflake**
+* Layered transformations and testing with **dbt**
+* Data quality monitoring and audit logging
+* Production engineering principles: idempotency, traceability, configuration isolation
+
+---
 
 ## Architecture (high level)
 
-* **Ingestion (Python)**
-  CSV → Snowflake RAW using `write_pandas`
-  Idempotent loads (TRUNCATE + reload) with ingestion auditing
-* **Transformations (dbt)**
+Local, prod-like setup using **Docker + Airflow**, loading into **Snowflake**.
 
-  * STAGING: clean & standardize
-  * CORE: integrated entities and facts
-  * MARTS: KPIs and ML-ready datasets
-    Schema tests: `unique`, `not_null`, `relationships`
-* **Orchestration & Monitoring (Airflow)**
-  DAGs for ingestion, transforms, and data quality checks
-  Results logged to audit tables (DQ + ingestion)
+### Ingestion (Python)
+
+* Reads source CSVs from `data/raw/source_system`
+* Loads into Snowflake **RAW tables**
+* Uses **TRUNCATE + reload** to ensure idempotent daily loads
+* Ingestion history written to `RAW.RAW_LOAD_AUDIT`
+
+### Transformations (dbt)
+
+* **STAGING**: type casting, cleaning, naming standardization
+* **CORE**: integrated entities and fact-like models
+* **MARTS**: business KPIs and ML-ready datasets
+* Schema tests: `unique`, `not_null`, `relationships`
+
+### Orchestration & Monitoring (Airflow)
+
+* Airflow runs in Docker with Postgres metadata DB
+* Project mounted at `/opt/airflow`
+* Environment variables injected via `.env` and Docker `env_file`
+* Data quality checks logged to `RAW.DATA_QUALITY_AUDIT`
+
+---
 
 ## Snowflake data layers
 
-* **RAW**: source + audit tables
-* **STAGING**: cleaned views
-* **CORE**: integrated models & facts
-* **MARTS**: business KPIs and ML features
+* **RAW**
+  Source tables loaded from CSV + audit tables
+* **STAGING**
+  Cleaned, standardized views
+* **CORE**
+  Integrated entities and facts
+* **MARTS**
+  Business KPIs and ML-ready datasets
+
+---
+
+## Design evolution (intentional)
+
+This project demonstrates how ingestion strategies evolve as operational needs increase.
+
+### v1 — TRUNCATE + reload (**main branch**)
+
+* Simple and predictable ingestion pattern
+* Works well for small to medium data volumes
+* Easy to test and reason about
+* Used as the **baseline implementation**
+
+### v2 — Run-aware ingestion (**`v2_run_aware` branch**)
+
+* Immutable, run-partitioned RAW tables
+* Deterministic `LOAD_ID` (`dag_id::run_id`)
+* Safe retries and backfills without data loss
+* Full lineage and traceability per Airflow run
+* Consumer-friendly RAW views always point to the latest successful load
+
+> The `v2_run_aware` branch represents the **production-grade evolution**
+> after identifying the limitations of TRUNCATE-based ingestion.
+
+---
 
 ## Airflow DAGs
 
-1. **Raw ingestion + full build** (daily)
-2. **dbt-only transforms** (prod-style separation)
-3. **Data quality monitoring** (row counts, duplicates, freshness)
+* **Raw ingestion + full build**
+* **dbt-only transformations**
+* **Data quality monitoring** (row counts, duplicates, freshness)
 
-## Production-readiness highlights
-
-* Idempotent ingestion to prevent downstream test failures
-* Environment-driven configuration (`SNOWFLAKE_*`, Docker `env_file`)
-* dbt governance via automated testing
-* Auditing tables for operational visibility
-* Clean separation between ingestion, transformation, and monitoring
-
-## What I learned / solved
-
-* Airflow Docker setup aligned with production (Postgres metadata)
-* Secure Airflow config (Fernet key)
-* Reliable DAG discovery and volume mounting
-* Fixing non-idempotent ingestion causing dbt test failures
-* Portable execution with robust path resolution
+---
 
 ## Run locally
 
-1. Create `.env` with `SNOWFLAKE_*` credentials
-2. Start Airflow via Docker Compose
+1. Create `.env` at repo root with `SNOWFLAKE_*` variables (do not commit)
+2. Start Airflow:
+
+   ```bash
+   docker compose up -d
+   ```
 3. Open Airflow UI: `http://localhost:8080`
-4. Trigger ingestion, transform, or monitoring DAGs
+4. Trigger:
+
+   * `mfg_raw_ingestion_dag`
+   * `mfg_dbt_transform_dag`
+   * `mfg_data_quality_monitoring_dag`
+
 
