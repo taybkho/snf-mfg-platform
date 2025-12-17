@@ -1,0 +1,37 @@
+[2025-12-10T22:25:17.359+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-10T22:25:17.396+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_accelerator_pipeline.ingest_raw_to_snowflake manual__2025-12-10T22:25:16.725348+00:00 [queued]>
+[2025-12-10T22:25:17.404+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_accelerator_pipeline.ingest_raw_to_snowflake manual__2025-12-10T22:25:16.725348+00:00 [queued]>
+[2025-12-10T22:25:17.405+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-12-10T22:25:17.421+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_raw_to_snowflake> on 2025-12-10 22:25:16.725348+00:00
+[2025-12-10T22:25:17.432+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_accelerator_pipeline', 'ingest_raw_to_snowflake', 'manual__2025-12-10T22:25:16.725348+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/mfg_pipeline.py', '--cfg-path', '/tmp/tmpmbj5x8_q']
+[2025-12-10T22:25:17.443+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=243) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-10T22:25:17.444+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask ingest_raw_to_snowflake
+[2025-12-10T22:25:17.445+0000] {standard_task_runner.py:63} INFO - Started process 244 to run task
+[2025-12-10T22:25:17.520+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_accelerator_pipeline.ingest_raw_to_snowflake manual__2025-12-10T22:25:16.725348+00:00 [running]> on host 0420a1dd2079
+[2025-12-10T22:25:17.654+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='mfg_accelerator_pipeline' AIRFLOW_CTX_TASK_ID='ingest_raw_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-12-10T22:25:16.725348+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-10T22:25:16.725348+00:00'
+[2025-12-10T22:25:17.655+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-10T22:25:17.710+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-10T22:25:17.711+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/*** && python ingestion/python/load_raw_to_snowflake.py']
+[2025-12-10T22:25:17.720+0000] {subprocess.py:86} INFO - Output:
+[2025-12-10T22:25:17.753+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/ingestion/python/load_raw_to_snowflake.py': [Errno 2] No such file or directory
+[2025-12-10T22:25:17.756+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2025-12-10T22:25:17.757+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-10T22:25:17.768+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2025-12-10T22:25:17.772+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=mfg_accelerator_pipeline, task_id=ingest_raw_to_snowflake, execution_date=20251210T222516, start_date=20251210T222517, end_date=20251210T222517
+[2025-12-10T22:25:17.787+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 2 for task ingest_raw_to_snowflake (Bash command failed. The command returned a non-zero exit code 2.; 244)
+[2025-12-10T22:25:17.821+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-12-10T22:25:17.844+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-10T22:25:17.849+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

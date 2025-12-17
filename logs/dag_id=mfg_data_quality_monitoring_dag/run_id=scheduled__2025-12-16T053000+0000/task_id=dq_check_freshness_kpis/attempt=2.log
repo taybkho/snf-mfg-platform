@@ -1,0 +1,135 @@
+[2025-12-17T11:30:51.323+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T11:30:51.373+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T11:30:51.387+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T11:30:51.388+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2025-12-17T11:30:51.416+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): dq_check_freshness_kpis> on 2025-12-16 05:30:00+00:00
+[2025-12-17T11:30:51.433+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_data_quality_monitoring_dag', 'dq_check_freshness_kpis', 'scheduled__2025-12-16T05:30:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/mfg_data_quality_monitoring_dag.py', '--cfg-path', '/tmp/tmpuy2onnfn']
+[2025-12-17T11:30:51.442+0000] {standard_task_runner.py:91} INFO - Job 23: Subtask dq_check_freshness_kpis
+[2025-12-17T11:30:51.443+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3178) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T11:30:51.447+0000] {standard_task_runner.py:63} INFO - Started process 3187 to run task
+[2025-12-17T11:30:51.594+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [running]> on host ada33a2b5ec7
+[2025-12-17T11:30:51.784+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_data_quality_monitoring_dag' AIRFLOW_CTX_TASK_ID='dq_check_freshness_kpis' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:30:00+00:00'
+[2025-12-17T11:30:51.786+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T11:30:51.809+0000] {connection.py:521} INFO - Snowflake Connector for Python Version: 3.18.0, Python Version: 3.12.2, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-12-17T11:30:51.811+0000] {connection.py:1464} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-17T11:30:54.581+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T11:30:54.583+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/mfg_data_quality_monitoring_dag.py", line 144, in dq_check_freshness_kpis
+    max_date = _fetch_one(cur, f"SELECT MAX(CALENDAR_DATE) FROM {db}.MARTS.MFG_PLANT_DAILY_KPIS")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/mfg_data_quality_monitoring_dag.py", line 74, in _fetch_one
+    cur.execute(sql, params or ())
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1134, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 286, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 341, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 217, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002003 (42S02): 01c11c12-0107-4c45-0013-40ff0016f886: SQL compilation error:
+Object 'MFG_ACCELERATOR.MARTS.MFG_PLANT_DAILY_KPIS' does not exist or not authorized.
+[2025-12-17T11:30:54.600+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=mfg_data_quality_monitoring_dag, task_id=dq_check_freshness_kpis, execution_date=20251216T053000, start_date=20251217T113051, end_date=20251217T113054
+[2025-12-17T11:30:54.614+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 23 for task dq_check_freshness_kpis (002003 (42S02): 01c11c12-0107-4c45-0013-40ff0016f886: SQL compilation error:
+Object 'MFG_ACCELERATOR.MARTS.MFG_PLANT_DAILY_KPIS' does not exist or not authorized.; 3187)
+[2025-12-17T11:30:54.642+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-12-17T11:30:54.668+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T11:30:54.674+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T13:35:21.744+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:35:21.780+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T13:35:21.791+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T13:35:21.792+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 2
+[2025-12-17T13:35:21.815+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): dq_check_freshness_kpis> on 2025-12-16 05:30:00+00:00
+[2025-12-17T13:35:21.826+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2719) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:35:21.825+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_data_quality_monitoring_dag', 'dq_check_freshness_kpis', 'scheduled__2025-12-16T05:30:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/mfg_data_quality_monitoring_dag.py', '--cfg-path', '/tmp/tmpgdi0yjaq']
+[2025-12-17T13:35:21.828+0000] {standard_task_runner.py:63} INFO - Started process 2722 to run task
+[2025-12-17T13:35:21.828+0000] {standard_task_runner.py:91} INFO - Job 51: Subtask dq_check_freshness_kpis
+[2025-12-17T13:35:21.899+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [running]> on host 84fc30c39b31
+[2025-12-17T13:35:22.012+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_data_quality_monitoring_dag' AIRFLOW_CTX_TASK_ID='dq_check_freshness_kpis' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:30:00+00:00'
+[2025-12-17T13:35:22.014+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:35:22.029+0000] {connection.py:414} INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.2, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-12-17T13:35:22.031+0000] {connection.py:1187} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-17T13:35:22.031+0000] {connection.py:1268} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-17T13:35:23.772+0000] {connection.py:779} INFO - closed
+[2025-12-17T13:35:24.041+0000] {connection.py:785} INFO - No async queries seem to be running, deleting session
+[2025-12-17T13:35:24.287+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:35:24.288+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/mfg_data_quality_monitoring_dag.py", line 144, in dq_check_freshness_kpis
+    max_date = _fetch_one(cur, f"SELECT MAX(CALENDAR_DATE) FROM {db}.MARTS.MFG_PLANT_DAILY_KPIS")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/mfg_data_quality_monitoring_dag.py", line 74, in _fetch_one
+    cur.execute(sql, params or ())
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/cursor.py", line 1087, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 345, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.12/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 002003 (42S02): 01c11c8f-0107-4d17-0013-40ff0017423e: SQL compilation error:
+Object 'MFG_ACCELERATOR.MARTS.MFG_PLANT_DAILY_KPIS' does not exist or not authorized.
+[2025-12-17T13:35:24.304+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=mfg_data_quality_monitoring_dag, task_id=dq_check_freshness_kpis, execution_date=20251216T053000, start_date=20251217T133521, end_date=20251217T133524
+[2025-12-17T13:35:24.318+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 51 for task dq_check_freshness_kpis (002003 (42S02): 01c11c8f-0107-4d17-0013-40ff0017423e: SQL compilation error:
+Object 'MFG_ACCELERATOR.MARTS.MFG_PLANT_DAILY_KPIS' does not exist or not authorized.; 2722)
+[2025-12-17T13:35:24.342+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-12-17T13:35:24.366+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T13:35:24.371+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T18:19:35.926+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T18:19:35.970+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T18:19:35.983+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [queued]>
+[2025-12-17T18:19:35.984+0000] {taskinstance.py:2303} INFO - Starting attempt 2 of 3
+[2025-12-17T18:19:36.004+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): dq_check_freshness_kpis> on 2025-12-16 05:30:00+00:00
+[2025-12-17T18:19:36.016+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_data_quality_monitoring_dag', 'dq_check_freshness_kpis', 'scheduled__2025-12-16T05:30:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/mfg_data_quality_monitoring_dag.py', '--cfg-path', '/tmp/tmproy79f3q']
+[2025-12-17T18:19:36.021+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask dq_check_freshness_kpis
+[2025-12-17T18:19:36.023+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1859) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T18:19:36.024+0000] {standard_task_runner.py:63} INFO - Started process 1869 to run task
+[2025-12-17T18:19:36.121+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_data_quality_monitoring_dag.dq_check_freshness_kpis scheduled__2025-12-16T05:30:00+00:00 [running]> on host 8717822a88d5
+[2025-12-17T18:19:36.289+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_data_quality_monitoring_dag' AIRFLOW_CTX_TASK_ID='dq_check_freshness_kpis' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:30:00+00:00'
+[2025-12-17T18:19:36.293+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T18:19:36.316+0000] {connection.py:414} INFO - Snowflake Connector for Python Version: 3.12.0, Python Version: 3.12.2, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2025-12-17T18:19:36.317+0000] {connection.py:1187} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-17T18:19:36.318+0000] {connection.py:1268} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-17T18:19:38.735+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-17T18:19:38.738+0000] {connection.py:779} INFO - closed
+[2025-12-17T18:19:39.135+0000] {connection.py:785} INFO - No async queries seem to be running, deleting session
+[2025-12-17T18:19:39.594+0000] {python.py:237} INFO - Done. Returned value was: [{'check_name': 'freshness_mfg_plant_daily_kpis', 'severity': 'WARN', 'status': 'PASS', 'details': {'table': 'MFG_ACCELERATOR.MARTS.MFG_PLANT_DAILY_KPIS', 'max_calendar_date': '2026-01-08', 'today': '2025-12-17', 'delta_days': -22, 'threshold_days': 2, 'marts_schema': 'MARTS'}}]
+[2025-12-17T18:19:39.596+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T18:19:39.633+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_data_quality_monitoring_dag, task_id=dq_check_freshness_kpis, execution_date=20251216T053000, start_date=20251217T181935, end_date=20251217T181939
+[2025-12-17T18:19:39.676+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T18:19:39.703+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T18:19:39.707+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

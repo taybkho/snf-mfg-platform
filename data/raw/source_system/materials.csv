@@ -1,0 +1,501 @@
+material_id,material_name,material_type,unit_of_measure,status,created_at
+MAT-00001,Multi-layered dedicated functionalities,FINISHED_PRODUCT,kg,ACTIVE,2021-10-13
+MAT-00002,Intuitive zero-defect product,EXCIPIENT,g,ACTIVE,2025-02-27
+MAT-00003,Profound 5thgeneration algorithm,FINISHED_PRODUCT,kg,DEV,2021-10-15
+MAT-00004,Assimilated uniform installation,FINISHED_PRODUCT,kg,DEV,2023-07-29
+MAT-00005,Enterprise-wide full-range knowledge user,API,kg,ACTIVE,2024-09-18
+MAT-00006,Innovative reciprocal model,API,pcs,DEV,2025-10-16
+MAT-00007,Managed tertiary flexibility,FINISHED_PRODUCT,g,DEV,2022-04-19
+MAT-00008,Up-sized zero administration archive,FINISHED_PRODUCT,pcs,PHASE_OUT,2024-09-14
+MAT-00009,Enterprise-wide methodical throughput,EXCIPIENT,pcs,PHASE_OUT,2021-05-27
+MAT-00010,Optional modular challenge,API,g,DEV,2023-07-28
+MAT-00011,Synergistic asynchronous initiative,EXCIPIENT,L,ACTIVE,2024-09-25
+MAT-00012,Phased local contingency,EXCIPIENT,kg,ACTIVE,2023-10-23
+MAT-00013,Enterprise-wide heuristic software,API,L,PHASE_OUT,2022-07-22
+MAT-00014,Digitized composite application,EXCIPIENT,kg,DEV,2023-05-14
+MAT-00015,Configurable background methodology,FINISHED_PRODUCT,kg,PHASE_OUT,2025-07-01
+MAT-00016,Automated needs-based conglomeration,FINISHED_PRODUCT,L,DEV,2022-06-22
+MAT-00017,Networked multi-tasking moratorium,EXCIPIENT,pcs,ACTIVE,2021-12-28
+MAT-00018,Pre-emptive solution-oriented support,API,kg,DEV,2024-08-30
+MAT-00019,Diverse cohesive approach,EXCIPIENT,kg,ACTIVE,2021-01-30
+MAT-00020,Multi-channeled systemic parallelism,API,mL,PHASE_OUT,2023-05-26
+MAT-00021,Cloned foreground workforce,FINISHED_PRODUCT,L,ACTIVE,2023-11-12
+MAT-00022,Upgradable empowering definition,EXCIPIENT,g,DEV,2024-06-11
+MAT-00023,Versatile coherent customer loyalty,FINISHED_PRODUCT,kg,DEV,2022-05-19
+MAT-00024,Managed coherent open architecture,API,pcs,DEV,2024-07-26
+MAT-00025,Persevering content-based access,API,mL,PHASE_OUT,2024-06-05
+MAT-00026,Managed object-oriented paradigm,FINISHED_PRODUCT,pcs,ACTIVE,2022-02-06
+MAT-00027,Focused intermediate monitoring,EXCIPIENT,kg,ACTIVE,2021-05-01
+MAT-00028,Balanced full-range productivity,API,L,PHASE_OUT,2024-06-09
+MAT-00029,Quality-focused multi-tasking firmware,API,g,DEV,2021-01-10
+MAT-00030,Re-engineered composite access,FINISHED_PRODUCT,L,ACTIVE,2022-04-07
+MAT-00031,Horizontal 5thgeneration adapter,EXCIPIENT,mL,DEV,2023-05-15
+MAT-00032,Focused fault-tolerant toolset,API,L,ACTIVE,2024-07-22
+MAT-00033,Open-architected multi-state matrix,FINISHED_PRODUCT,pcs,DEV,2024-06-19
+MAT-00034,Multi-tiered 24/7 artificial intelligence,FINISHED_PRODUCT,pcs,PHASE_OUT,2022-09-01
+MAT-00035,Organic logistical migration,EXCIPIENT,L,ACTIVE,2025-03-01
+MAT-00036,Realigned global software,FINISHED_PRODUCT,mL,ACTIVE,2021-09-14
+MAT-00037,Multi-lateral system-worthy policy,API,kg,ACTIVE,2022-06-03
+MAT-00038,Function-based high-level knowledge user,API,mL,DEV,2025-08-01
+MAT-00039,Programmable client-server hierarchy,EXCIPIENT,mL,DEV,2023-04-26
+MAT-00040,Profit-focused exuding ability,FINISHED_PRODUCT,L,DEV,2021-02-11
+MAT-00041,User-centric web-enabled orchestration,API,kg,DEV,2020-12-23
+MAT-00042,Balanced disintermediate process improvement,FINISHED_PRODUCT,L,DEV,2024-01-13
+MAT-00043,Networked asymmetric conglomeration,API,L,PHASE_OUT,2025-01-20
+MAT-00044,Fundamental next generation superstructure,EXCIPIENT,kg,DEV,2021-01-11
+MAT-00045,Synchronized demand-driven solution,FINISHED_PRODUCT,L,DEV,2021-09-01
+MAT-00046,Diverse analyzing artificial intelligence,API,pcs,ACTIVE,2021-01-22
+MAT-00047,Operative content-based encoding,FINISHED_PRODUCT,L,DEV,2023-02-04
+MAT-00048,Implemented content-based Graphical User Interface,FINISHED_PRODUCT,g,ACTIVE,2023-11-05
+MAT-00049,Object-based content-based intranet,API,pcs,DEV,2025-12-08
+MAT-00050,Ameliorated human-resource hierarchy,FINISHED_PRODUCT,L,PHASE_OUT,2025-10-31
+MAT-00051,Organic local service-desk,API,L,PHASE_OUT,2024-08-06
+MAT-00052,Synchronized secondary open system,API,g,DEV,2025-07-01
+MAT-00053,Networked multimedia help-desk,API,mL,ACTIVE,2021-09-04
+MAT-00054,Digitized cohesive alliance,FINISHED_PRODUCT,g,ACTIVE,2022-03-29
+MAT-00055,Progressive didactic monitoring,EXCIPIENT,pcs,ACTIVE,2024-06-15
+MAT-00056,Synergized real-time implementation,FINISHED_PRODUCT,pcs,PHASE_OUT,2024-10-02
+MAT-00057,Innovative value-added budgetary management,FINISHED_PRODUCT,g,DEV,2024-03-11
+MAT-00058,De-engineered asynchronous benchmark,EXCIPIENT,L,PHASE_OUT,2023-01-15
+MAT-00059,Intuitive optimal database,EXCIPIENT,kg,ACTIVE,2024-09-05
+MAT-00060,Phased attitude-oriented artificial intelligence,API,L,ACTIVE,2022-08-23
+MAT-00061,Secured real-time installation,FINISHED_PRODUCT,g,DEV,2024-09-14
+MAT-00062,Fully-configurable intangible Graphic Interface,API,kg,DEV,2022-05-27
+MAT-00063,Automated optimal productivity,API,g,ACTIVE,2025-10-06
+MAT-00064,Virtual homogeneous product,EXCIPIENT,kg,DEV,2024-08-09
+MAT-00065,Grass-roots static access,EXCIPIENT,mL,ACTIVE,2022-12-01
+MAT-00066,Proactive analyzing alliance,API,pcs,DEV,2023-04-16
+MAT-00067,Realigned neutral collaboration,API,mL,PHASE_OUT,2024-11-15
+MAT-00068,Ameliorated tangible instruction set,API,kg,DEV,2023-07-11
+MAT-00069,Multi-layered human-resource collaboration,EXCIPIENT,mL,PHASE_OUT,2023-04-28
+MAT-00070,Team-oriented incremental leverage,FINISHED_PRODUCT,kg,DEV,2022-04-11
+MAT-00071,Automated bifurcated pricing structure,FINISHED_PRODUCT,kg,ACTIVE,2023-09-07
+MAT-00072,Sharable full-range orchestration,FINISHED_PRODUCT,L,ACTIVE,2024-07-18
+MAT-00073,Reverse-engineered context-sensitive artificial intelligence,API,g,DEV,2023-06-05
+MAT-00074,Progressive multimedia interface,API,mL,ACTIVE,2024-05-18
+MAT-00075,Multi-layered bifurcated parallelism,EXCIPIENT,g,ACTIVE,2023-06-16
+MAT-00076,Synergized radical time-frame,FINISHED_PRODUCT,kg,ACTIVE,2022-04-14
+MAT-00077,Reactive well-modulated leverage,FINISHED_PRODUCT,kg,ACTIVE,2021-09-18
+MAT-00078,Horizontal content-based success,API,g,PHASE_OUT,2023-03-21
+MAT-00079,Advanced modular emulation,EXCIPIENT,g,PHASE_OUT,2025-08-11
+MAT-00080,Organic intermediate focus group,API,mL,ACTIVE,2023-10-02
+MAT-00081,Reduced intermediate conglomeration,EXCIPIENT,mL,PHASE_OUT,2023-07-27
+MAT-00082,Reverse-engineered local array,FINISHED_PRODUCT,pcs,DEV,2021-11-29
+MAT-00083,Right-sized incremental system engine,EXCIPIENT,g,ACTIVE,2024-04-11
+MAT-00084,Right-sized systematic analyzer,API,kg,DEV,2021-10-25
+MAT-00085,Self-enabling object-oriented budgetary management,FINISHED_PRODUCT,kg,DEV,2024-03-07
+MAT-00086,Multi-lateral discrete encoding,API,kg,DEV,2023-04-08
+MAT-00087,Seamless modular framework,FINISHED_PRODUCT,pcs,ACTIVE,2025-08-15
+MAT-00088,Synchronized dedicated pricing structure,FINISHED_PRODUCT,kg,ACTIVE,2025-07-22
+MAT-00089,Cross-platform human-resource algorithm,FINISHED_PRODUCT,kg,DEV,2021-02-08
+MAT-00090,Reactive transitional task-force,API,mL,ACTIVE,2020-12-12
+MAT-00091,Reverse-engineered clear-thinking interface,FINISHED_PRODUCT,g,DEV,2022-08-10
+MAT-00092,Synergistic tangible artificial intelligence,API,pcs,ACTIVE,2023-08-04
+MAT-00093,Integrated contextually-based standardization,FINISHED_PRODUCT,pcs,DEV,2023-01-04
+MAT-00094,Stand-alone human-resource concept,EXCIPIENT,L,ACTIVE,2022-03-09
+MAT-00095,Realigned asymmetric groupware,FINISHED_PRODUCT,L,ACTIVE,2024-06-14
+MAT-00096,Customer-focused non-volatile info-mediaries,EXCIPIENT,g,DEV,2022-04-28
+MAT-00097,Proactive web-enabled help-desk,EXCIPIENT,mL,PHASE_OUT,2021-09-22
+MAT-00098,Implemented fault-tolerant secured line,API,kg,PHASE_OUT,2022-06-16
+MAT-00099,Integrated hybrid interface,FINISHED_PRODUCT,kg,ACTIVE,2022-12-04
+MAT-00100,User-friendly object-oriented protocol,API,pcs,PHASE_OUT,2025-03-13
+MAT-00101,Future-proofed grid-enabled function,EXCIPIENT,kg,ACTIVE,2023-11-14
+MAT-00102,Persevering leadingedge neural-net,EXCIPIENT,g,PHASE_OUT,2021-04-07
+MAT-00103,Synergistic next generation info-mediaries,FINISHED_PRODUCT,L,DEV,2021-06-01
+MAT-00104,Multi-tiered executive help-desk,FINISHED_PRODUCT,pcs,ACTIVE,2022-03-13
+MAT-00105,Visionary static function,FINISHED_PRODUCT,L,DEV,2025-05-11
+MAT-00106,Persevering high-level superstructure,API,L,ACTIVE,2020-12-13
+MAT-00107,Cloned analyzing function,API,pcs,ACTIVE,2024-05-31
+MAT-00108,Polarized asymmetric algorithm,EXCIPIENT,pcs,ACTIVE,2021-12-01
+MAT-00109,Fundamental reciprocal hardware,EXCIPIENT,g,DEV,2022-05-21
+MAT-00110,Open-architected stable policy,EXCIPIENT,pcs,PHASE_OUT,2024-07-13
+MAT-00111,Expanded tertiary capability,API,kg,DEV,2023-07-26
+MAT-00112,Cross-group secondary instruction set,EXCIPIENT,kg,ACTIVE,2024-01-26
+MAT-00113,Up-sized methodical paradigm,API,L,ACTIVE,2021-10-13
+MAT-00114,Adaptive impactful projection,EXCIPIENT,pcs,DEV,2023-07-18
+MAT-00115,Managed eco-centric hierarchy,FINISHED_PRODUCT,kg,ACTIVE,2025-07-08
+MAT-00116,Vision-oriented static archive,FINISHED_PRODUCT,g,DEV,2025-09-27
+MAT-00117,Enterprise-wide global help-desk,EXCIPIENT,pcs,DEV,2025-02-09
+MAT-00118,Robust 5thgeneration flexibility,EXCIPIENT,g,ACTIVE,2024-03-18
+MAT-00119,Synergistic eco-centric system engine,EXCIPIENT,kg,PHASE_OUT,2024-10-05
+MAT-00120,Multi-layered interactive solution,FINISHED_PRODUCT,g,DEV,2025-05-13
+MAT-00121,Decentralized global encryption,EXCIPIENT,pcs,PHASE_OUT,2022-06-17
+MAT-00122,Public-key multi-state adapter,FINISHED_PRODUCT,g,ACTIVE,2021-02-03
+MAT-00123,Inverse client-driven process improvement,API,g,PHASE_OUT,2025-10-20
+MAT-00124,Re-contextualized empowering definition,API,L,PHASE_OUT,2021-06-11
+MAT-00125,Profound didactic approach,FINISHED_PRODUCT,g,PHASE_OUT,2025-01-17
+MAT-00126,Intuitive needs-based paradigm,FINISHED_PRODUCT,kg,PHASE_OUT,2021-01-18
+MAT-00127,Configurable zero-defect encryption,API,mL,ACTIVE,2024-10-27
+MAT-00128,Synergized systematic approach,EXCIPIENT,L,PHASE_OUT,2021-05-04
+MAT-00129,Focused secondary monitoring,API,g,ACTIVE,2022-03-29
+MAT-00130,Enhanced grid-enabled standardization,API,mL,PHASE_OUT,2024-05-18
+MAT-00131,Optional exuding artificial intelligence,API,L,PHASE_OUT,2022-05-06
+MAT-00132,Front-line logistical functionalities,FINISHED_PRODUCT,mL,DEV,2021-03-18
+MAT-00133,Focused clear-thinking strategy,FINISHED_PRODUCT,L,ACTIVE,2025-04-17
+MAT-00134,Monitored bifurcated moderator,EXCIPIENT,g,DEV,2024-06-14
+MAT-00135,Operative intangible middleware,API,kg,DEV,2023-07-04
+MAT-00136,Adaptive encompassing architecture,EXCIPIENT,L,PHASE_OUT,2022-07-17
+MAT-00137,Face-to-face non-volatile functionalities,FINISHED_PRODUCT,kg,PHASE_OUT,2022-09-16
+MAT-00138,Ergonomic hybrid task-force,API,L,ACTIVE,2021-12-19
+MAT-00139,Enterprise-wide 3rdgeneration portal,EXCIPIENT,kg,DEV,2021-06-02
+MAT-00140,Open-source multi-tasking success,FINISHED_PRODUCT,g,PHASE_OUT,2023-07-10
+MAT-00141,Programmable 6thgeneration superstructure,API,L,DEV,2024-03-07
+MAT-00142,Reactive needs-based alliance,FINISHED_PRODUCT,kg,DEV,2024-04-03
+MAT-00143,De-engineered clear-thinking infrastructure,FINISHED_PRODUCT,L,DEV,2023-08-26
+MAT-00144,Face-to-face optimizing challenge,EXCIPIENT,mL,DEV,2024-04-13
+MAT-00145,Focused logistical focus group,FINISHED_PRODUCT,g,ACTIVE,2023-08-01
+MAT-00146,Phased real-time time-frame,FINISHED_PRODUCT,mL,DEV,2021-09-29
+MAT-00147,Adaptive asynchronous capacity,API,pcs,DEV,2024-04-02
+MAT-00148,Visionary bottom-line success,EXCIPIENT,pcs,ACTIVE,2024-03-27
+MAT-00149,Integrated static installation,EXCIPIENT,g,PHASE_OUT,2021-07-14
+MAT-00150,Integrated zero-defect hierarchy,FINISHED_PRODUCT,pcs,DEV,2024-02-19
+MAT-00151,Visionary asymmetric product,EXCIPIENT,mL,PHASE_OUT,2022-02-25
+MAT-00152,Customizable explicit customer loyalty,API,pcs,PHASE_OUT,2021-06-28
+MAT-00153,Visionary didactic array,FINISHED_PRODUCT,g,DEV,2025-06-19
+MAT-00154,De-engineered upward-trending encryption,EXCIPIENT,pcs,DEV,2022-05-23
+MAT-00155,Centralized dynamic structure,FINISHED_PRODUCT,L,ACTIVE,2021-05-08
+MAT-00156,User-friendly analyzing success,API,L,ACTIVE,2021-06-02
+MAT-00157,Networked reciprocal core,API,g,ACTIVE,2025-09-06
+MAT-00158,Implemented multi-state knowledge user,API,mL,DEV,2021-03-05
+MAT-00159,Triple-buffered actuating software,API,mL,PHASE_OUT,2020-12-21
+MAT-00160,Robust asynchronous frame,FINISHED_PRODUCT,pcs,ACTIVE,2021-11-29
+MAT-00161,Multi-layered empowering analyzer,FINISHED_PRODUCT,mL,PHASE_OUT,2023-09-13
+MAT-00162,User-centric composite extranet,API,g,DEV,2022-01-31
+MAT-00163,Function-based analyzing instruction set,API,kg,PHASE_OUT,2024-09-17
+MAT-00164,Networked zero administration core,API,pcs,PHASE_OUT,2025-08-29
+MAT-00165,Versatile bifurcated synergy,FINISHED_PRODUCT,g,ACTIVE,2023-05-20
+MAT-00166,Re-engineered 4thgeneration software,API,mL,DEV,2022-12-18
+MAT-00167,Multi-lateral optimizing extranet,FINISHED_PRODUCT,pcs,PHASE_OUT,2021-09-15
+MAT-00168,Programmable value-added info-mediaries,EXCIPIENT,pcs,DEV,2023-02-10
+MAT-00169,Public-key even-keeled definition,EXCIPIENT,pcs,PHASE_OUT,2025-01-18
+MAT-00170,Implemented zero-defect protocol,FINISHED_PRODUCT,mL,PHASE_OUT,2024-06-27
+MAT-00171,Multi-channeled needs-based support,API,L,DEV,2023-03-23
+MAT-00172,Synchronized systemic migration,FINISHED_PRODUCT,g,PHASE_OUT,2023-06-23
+MAT-00173,Multi-channeled fresh-thinking definition,API,L,ACTIVE,2024-06-01
+MAT-00174,Extended object-oriented intranet,EXCIPIENT,L,DEV,2025-06-27
+MAT-00175,Profit-focused hybrid support,API,g,ACTIVE,2023-10-17
+MAT-00176,Re-contextualized needs-based data-warehouse,FINISHED_PRODUCT,g,DEV,2024-09-27
+MAT-00177,Synergistic asymmetric moderator,API,mL,PHASE_OUT,2024-02-01
+MAT-00178,Multi-lateral bifurcated core,FINISHED_PRODUCT,mL,PHASE_OUT,2025-08-04
+MAT-00179,Up-sized local toolset,API,mL,PHASE_OUT,2021-08-16
+MAT-00180,Monitored neutral throughput,FINISHED_PRODUCT,kg,DEV,2023-10-22
+MAT-00181,Public-key reciprocal access,EXCIPIENT,kg,PHASE_OUT,2024-04-07
+MAT-00182,Multi-channeled client-driven forecast,EXCIPIENT,mL,DEV,2021-10-01
+MAT-00183,Balanced client-driven moratorium,FINISHED_PRODUCT,pcs,DEV,2024-09-14
+MAT-00184,Optional user-facing encoding,EXCIPIENT,g,PHASE_OUT,2023-07-01
+MAT-00185,Persistent multimedia Graphical User Interface,EXCIPIENT,kg,PHASE_OUT,2024-01-21
+MAT-00186,Multi-layered responsive analyzer,FINISHED_PRODUCT,mL,DEV,2025-01-05
+MAT-00187,Customizable user-facing forecast,EXCIPIENT,g,DEV,2022-12-12
+MAT-00188,Stand-alone modular firmware,API,mL,DEV,2022-10-11
+MAT-00189,Mandatory national methodology,FINISHED_PRODUCT,kg,ACTIVE,2022-05-03
+MAT-00190,Fundamental multi-tasking definition,EXCIPIENT,g,PHASE_OUT,2024-12-02
+MAT-00191,Self-enabling national focus group,API,L,PHASE_OUT,2024-02-08
+MAT-00192,Cross-platform static methodology,API,mL,PHASE_OUT,2024-01-18
+MAT-00193,Multi-layered well-modulated ability,EXCIPIENT,L,PHASE_OUT,2024-07-11
+MAT-00194,Customizable fault-tolerant strategy,API,mL,ACTIVE,2021-09-27
+MAT-00195,Ergonomic attitude-oriented frame,FINISHED_PRODUCT,kg,PHASE_OUT,2024-09-06
+MAT-00196,Upgradable high-level conglomeration,FINISHED_PRODUCT,kg,DEV,2025-09-18
+MAT-00197,Centralized heuristic encryption,API,g,ACTIVE,2021-03-27
+MAT-00198,Sharable 6thgeneration complexity,API,pcs,ACTIVE,2024-08-08
+MAT-00199,Universal multimedia groupware,API,mL,DEV,2025-04-19
+MAT-00200,Public-key motivating capacity,FINISHED_PRODUCT,g,PHASE_OUT,2022-01-07
+MAT-00201,Business-focused dynamic open architecture,EXCIPIENT,L,ACTIVE,2022-07-18
+MAT-00202,De-engineered reciprocal focus group,FINISHED_PRODUCT,kg,ACTIVE,2024-03-12
+MAT-00203,Fundamental stable complexity,API,pcs,ACTIVE,2024-03-11
+MAT-00204,Open-architected upward-trending approach,FINISHED_PRODUCT,mL,PHASE_OUT,2021-12-06
+MAT-00205,Persistent well-modulated intranet,API,kg,DEV,2022-01-25
+MAT-00206,Seamless systematic core,FINISHED_PRODUCT,g,ACTIVE,2022-01-12
+MAT-00207,Digitized local attitude,EXCIPIENT,pcs,ACTIVE,2021-06-23
+MAT-00208,Digitized multi-tasking hierarchy,FINISHED_PRODUCT,kg,PHASE_OUT,2022-12-14
+MAT-00209,Pre-emptive well-modulated pricing structure,EXCIPIENT,L,ACTIVE,2023-02-07
+MAT-00210,Pre-emptive motivating ability,FINISHED_PRODUCT,L,ACTIVE,2021-03-06
+MAT-00211,Progressive dynamic protocol,EXCIPIENT,mL,ACTIVE,2023-07-06
+MAT-00212,Cloned user-facing circuit,EXCIPIENT,mL,DEV,2025-01-30
+MAT-00213,Implemented regional Local Area Network,EXCIPIENT,g,DEV,2023-01-06
+MAT-00214,Persistent regional forecast,FINISHED_PRODUCT,L,DEV,2021-05-29
+MAT-00215,Total fresh-thinking parallelism,FINISHED_PRODUCT,mL,PHASE_OUT,2023-07-01
+MAT-00216,Self-enabling disintermediate installation,FINISHED_PRODUCT,pcs,PHASE_OUT,2024-02-18
+MAT-00217,Business-focused executive complexity,API,kg,PHASE_OUT,2020-12-30
+MAT-00218,Optional intangible hub,EXCIPIENT,g,PHASE_OUT,2022-09-29
+MAT-00219,Compatible attitude-oriented architecture,FINISHED_PRODUCT,mL,PHASE_OUT,2025-10-12
+MAT-00220,Compatible national budgetary management,EXCIPIENT,L,ACTIVE,2023-03-17
+MAT-00221,Multi-lateral tertiary software,API,L,PHASE_OUT,2024-01-12
+MAT-00222,Grass-roots non-volatile portal,EXCIPIENT,pcs,DEV,2021-01-02
+MAT-00223,Multi-tiered bi-directional approach,EXCIPIENT,pcs,ACTIVE,2023-01-16
+MAT-00224,Intuitive executive system engine,API,kg,ACTIVE,2021-11-26
+MAT-00225,Sharable motivating monitoring,EXCIPIENT,mL,DEV,2021-09-09
+MAT-00226,Visionary secondary process improvement,API,mL,DEV,2021-12-13
+MAT-00227,Digitized eco-centric strategy,EXCIPIENT,mL,ACTIVE,2025-06-02
+MAT-00228,Virtual client-server info-mediaries,EXCIPIENT,g,PHASE_OUT,2022-01-23
+MAT-00229,Integrated systemic customer loyalty,API,L,DEV,2022-09-05
+MAT-00230,Monitored 4thgeneration concept,EXCIPIENT,mL,DEV,2022-12-18
+MAT-00231,Robust analyzing interface,EXCIPIENT,mL,DEV,2022-11-08
+MAT-00232,Profound zero tolerance middleware,EXCIPIENT,L,DEV,2023-05-25
+MAT-00233,Synchronized radical contingency,EXCIPIENT,L,PHASE_OUT,2024-08-24
+MAT-00234,Universal leadingedge info-mediaries,API,g,PHASE_OUT,2025-04-09
+MAT-00235,Secured zero tolerance database,FINISHED_PRODUCT,pcs,DEV,2024-11-25
+MAT-00236,Managed mission-critical emulation,API,g,DEV,2023-03-24
+MAT-00237,Diverse local time-frame,EXCIPIENT,pcs,DEV,2022-08-05
+MAT-00238,Implemented static function,EXCIPIENT,kg,ACTIVE,2024-04-12
+MAT-00239,Digitized user-facing hub,API,L,ACTIVE,2024-03-30
+MAT-00240,Switchable 5thgeneration Graphical User Interface,API,pcs,ACTIVE,2024-05-27
+MAT-00241,Enhanced multi-tasking hardware,API,kg,DEV,2024-04-20
+MAT-00242,Business-focused methodical superstructure,FINISHED_PRODUCT,g,DEV,2021-01-26
+MAT-00243,Multi-channeled multimedia firmware,EXCIPIENT,kg,ACTIVE,2022-09-21
+MAT-00244,Adaptive fault-tolerant software,EXCIPIENT,mL,PHASE_OUT,2023-06-21
+MAT-00245,Horizontal foreground conglomeration,EXCIPIENT,g,ACTIVE,2024-07-10
+MAT-00246,Self-enabling exuding knowledgebase,EXCIPIENT,kg,ACTIVE,2023-09-11
+MAT-00247,Visionary uniform open architecture,EXCIPIENT,kg,DEV,2022-05-30
+MAT-00248,Progressive 24hour infrastructure,FINISHED_PRODUCT,kg,ACTIVE,2025-02-07
+MAT-00249,Intuitive client-driven conglomeration,FINISHED_PRODUCT,L,ACTIVE,2024-07-19
+MAT-00250,Secured explicit model,API,pcs,PHASE_OUT,2022-07-17
+MAT-00251,Synergized foreground portal,FINISHED_PRODUCT,pcs,ACTIVE,2021-08-04
+MAT-00252,Enterprise-wide multi-state solution,FINISHED_PRODUCT,mL,PHASE_OUT,2023-06-17
+MAT-00253,Face-to-face bottom-line architecture,EXCIPIENT,pcs,PHASE_OUT,2024-03-24
+MAT-00254,Organic encompassing encryption,FINISHED_PRODUCT,pcs,ACTIVE,2022-07-10
+MAT-00255,Streamlined next generation capacity,FINISHED_PRODUCT,kg,ACTIVE,2022-06-07
+MAT-00256,Monitored intangible approach,API,L,DEV,2025-06-26
+MAT-00257,Balanced exuding frame,API,g,ACTIVE,2022-11-05
+MAT-00258,Synergistic secondary contingency,API,g,ACTIVE,2023-08-26
+MAT-00259,Front-line intangible artificial intelligence,EXCIPIENT,pcs,PHASE_OUT,2024-04-22
+MAT-00260,Horizontal dedicated application,API,g,PHASE_OUT,2021-12-23
+MAT-00261,Fully-configurable even-keeled framework,EXCIPIENT,mL,ACTIVE,2022-02-01
+MAT-00262,Face-to-face static alliance,API,L,DEV,2022-08-20
+MAT-00263,Organized zero tolerance Internet solution,FINISHED_PRODUCT,g,PHASE_OUT,2025-04-18
+MAT-00264,Realigned 6thgeneration knowledgebase,FINISHED_PRODUCT,g,DEV,2025-02-07
+MAT-00265,Front-line exuding ability,EXCIPIENT,g,ACTIVE,2025-08-09
+MAT-00266,Mandatory disintermediate process improvement,API,L,DEV,2021-09-28
+MAT-00267,Customer-focused 5thgeneration installation,FINISHED_PRODUCT,L,PHASE_OUT,2025-03-30
+MAT-00268,Exclusive multi-tasking open system,EXCIPIENT,L,DEV,2023-09-07
+MAT-00269,Profit-focused exuding encoding,EXCIPIENT,pcs,DEV,2023-03-04
+MAT-00270,Synchronized executive Local Area Network,EXCIPIENT,kg,DEV,2025-09-19
+MAT-00271,Fully-configurable local customer loyalty,EXCIPIENT,L,DEV,2024-07-15
+MAT-00272,Reduced high-level utilization,API,kg,ACTIVE,2022-02-28
+MAT-00273,Secured neutral artificial intelligence,FINISHED_PRODUCT,pcs,ACTIVE,2021-08-26
+MAT-00274,Ergonomic impactful Local Area Network,FINISHED_PRODUCT,L,DEV,2025-09-18
+MAT-00275,Quality-focused methodical interface,API,mL,DEV,2022-04-15
+MAT-00276,Balanced directional success,EXCIPIENT,L,ACTIVE,2022-08-29
+MAT-00277,Right-sized national hardware,EXCIPIENT,mL,ACTIVE,2023-04-22
+MAT-00278,Polarized disintermediate structure,EXCIPIENT,mL,PHASE_OUT,2024-02-21
+MAT-00279,Ergonomic encompassing toolset,FINISHED_PRODUCT,kg,ACTIVE,2024-02-03
+MAT-00280,Networked value-added pricing structure,EXCIPIENT,mL,PHASE_OUT,2022-03-24
+MAT-00281,Monitored bandwidth-monitored protocol,EXCIPIENT,pcs,ACTIVE,2023-05-23
+MAT-00282,Front-line mobile intranet,API,L,PHASE_OUT,2024-02-16
+MAT-00283,Up-sized clear-thinking hierarchy,API,mL,DEV,2021-04-25
+MAT-00284,De-engineered 5thgeneration benchmark,API,pcs,PHASE_OUT,2023-08-16
+MAT-00285,Profit-focused reciprocal matrix,API,g,DEV,2023-11-30
+MAT-00286,Quality-focused clear-thinking analyzer,FINISHED_PRODUCT,mL,DEV,2023-06-18
+MAT-00287,Expanded client-server task-force,API,g,PHASE_OUT,2022-11-11
+MAT-00288,Enhanced intermediate Graphic Interface,API,L,PHASE_OUT,2021-01-01
+MAT-00289,Adaptive intermediate product,FINISHED_PRODUCT,mL,ACTIVE,2025-10-11
+MAT-00290,Object-based solution-oriented portal,FINISHED_PRODUCT,pcs,ACTIVE,2021-12-17
+MAT-00291,Universal upward-trending core,API,L,DEV,2025-11-11
+MAT-00292,Persistent incremental alliance,FINISHED_PRODUCT,mL,ACTIVE,2024-09-05
+MAT-00293,Total local projection,API,mL,ACTIVE,2022-04-23
+MAT-00294,Versatile mobile approach,API,mL,DEV,2024-04-21
+MAT-00295,Expanded 4thgeneration leverage,FINISHED_PRODUCT,L,PHASE_OUT,2021-04-05
+MAT-00296,Team-oriented stable benchmark,EXCIPIENT,mL,ACTIVE,2023-05-19
+MAT-00297,Synergized fault-tolerant portal,FINISHED_PRODUCT,g,PHASE_OUT,2024-11-14
+MAT-00298,Intuitive web-enabled throughput,FINISHED_PRODUCT,pcs,DEV,2021-01-04
+MAT-00299,Centralized systemic portal,API,kg,PHASE_OUT,2021-08-10
+MAT-00300,Centralized fault-tolerant knowledge user,EXCIPIENT,L,DEV,2024-06-10
+MAT-00301,Reactive reciprocal collaboration,API,L,DEV,2024-04-07
+MAT-00302,Face-to-face needs-based middleware,FINISHED_PRODUCT,pcs,DEV,2023-03-13
+MAT-00303,Focused zero tolerance Graphical User Interface,API,mL,DEV,2023-03-24
+MAT-00304,Optional zero administration database,EXCIPIENT,L,DEV,2021-08-30
+MAT-00305,Open-architected 3rdgeneration support,FINISHED_PRODUCT,mL,PHASE_OUT,2024-02-19
+MAT-00306,Cloned 4thgeneration installation,API,g,DEV,2023-10-17
+MAT-00307,Polarized background knowledgebase,API,mL,ACTIVE,2024-02-27
+MAT-00308,Configurable static software,FINISHED_PRODUCT,mL,DEV,2021-05-23
+MAT-00309,Secured content-based success,EXCIPIENT,mL,DEV,2021-07-01
+MAT-00310,Synchronized impactful function,FINISHED_PRODUCT,g,PHASE_OUT,2025-09-25
+MAT-00311,Mandatory explicit hardware,API,pcs,DEV,2024-01-30
+MAT-00312,Profound bottom-line Local Area Network,API,mL,ACTIVE,2022-12-28
+MAT-00313,Innovative dedicated workforce,EXCIPIENT,kg,DEV,2025-02-17
+MAT-00314,Streamlined executive benchmark,EXCIPIENT,g,ACTIVE,2023-04-23
+MAT-00315,Phased asynchronous open system,EXCIPIENT,L,DEV,2022-01-21
+MAT-00316,Cloned optimizing flexibility,EXCIPIENT,kg,PHASE_OUT,2021-02-28
+MAT-00317,Automated transitional knowledgebase,FINISHED_PRODUCT,pcs,PHASE_OUT,2024-03-01
+MAT-00318,Optional tangible complexity,FINISHED_PRODUCT,mL,DEV,2025-09-27
+MAT-00319,Future-proofed local utilization,FINISHED_PRODUCT,kg,ACTIVE,2022-05-27
+MAT-00320,Cross-platform heuristic strategy,FINISHED_PRODUCT,L,ACTIVE,2021-10-02
+MAT-00321,Front-line composite customer loyalty,API,mL,ACTIVE,2021-09-04
+MAT-00322,Integrated modular service-desk,FINISHED_PRODUCT,kg,PHASE_OUT,2025-01-03
+MAT-00323,Monitored tangible analyzer,FINISHED_PRODUCT,L,ACTIVE,2025-09-06
+MAT-00324,Operative fresh-thinking instruction set,EXCIPIENT,kg,PHASE_OUT,2023-12-06
+MAT-00325,Object-based scalable leverage,EXCIPIENT,mL,ACTIVE,2024-07-27
+MAT-00326,Mandatory global task-force,FINISHED_PRODUCT,mL,DEV,2022-02-12
+MAT-00327,Compatible zero tolerance encoding,API,g,ACTIVE,2025-07-01
+MAT-00328,Realigned logistical framework,FINISHED_PRODUCT,mL,DEV,2022-02-09
+MAT-00329,Multi-lateral explicit function,API,mL,DEV,2025-02-19
+MAT-00330,Centralized multi-tasking core,API,mL,DEV,2024-07-07
+MAT-00331,Organized contextually-based strategy,EXCIPIENT,L,DEV,2025-11-20
+MAT-00332,Object-based analyzing benchmark,EXCIPIENT,L,DEV,2022-11-16
+MAT-00333,Operative user-facing standardization,API,kg,PHASE_OUT,2024-01-02
+MAT-00334,Adaptive zero tolerance functionalities,FINISHED_PRODUCT,L,DEV,2023-07-25
+MAT-00335,Upgradable attitude-oriented capability,FINISHED_PRODUCT,L,PHASE_OUT,2021-03-14
+MAT-00336,Expanded intermediate architecture,EXCIPIENT,g,PHASE_OUT,2021-02-26
+MAT-00337,Polarized eco-centric Graphical User Interface,EXCIPIENT,kg,ACTIVE,2023-10-20
+MAT-00338,Digitized 3rdgeneration application,FINISHED_PRODUCT,L,DEV,2024-04-13
+MAT-00339,Extended scalable collaboration,FINISHED_PRODUCT,L,ACTIVE,2021-04-15
+MAT-00340,Automated intermediate encoding,FINISHED_PRODUCT,mL,PHASE_OUT,2025-11-23
+MAT-00341,Cloned coherent pricing structure,FINISHED_PRODUCT,kg,DEV,2021-10-05
+MAT-00342,Re-contextualized user-facing concept,EXCIPIENT,L,ACTIVE,2022-07-15
+MAT-00343,User-centric incremental Local Area Network,EXCIPIENT,g,DEV,2024-11-15
+MAT-00344,Universal maximized info-mediaries,FINISHED_PRODUCT,L,DEV,2021-09-14
+MAT-00345,Persistent bi-directional info-mediaries,FINISHED_PRODUCT,g,DEV,2025-05-25
+MAT-00346,Organized encompassing budgetary management,FINISHED_PRODUCT,kg,PHASE_OUT,2021-07-08
+MAT-00347,Multi-channeled optimizing product,EXCIPIENT,kg,DEV,2023-11-23
+MAT-00348,Re-contextualized encompassing attitude,FINISHED_PRODUCT,g,ACTIVE,2024-04-14
+MAT-00349,Diverse modular parallelism,EXCIPIENT,mL,ACTIVE,2024-10-24
+MAT-00350,Ameliorated foreground Graphical User Interface,API,pcs,PHASE_OUT,2022-12-18
+MAT-00351,Switchable uniform data-warehouse,FINISHED_PRODUCT,L,ACTIVE,2024-07-01
+MAT-00352,Quality-focused well-modulated toolset,EXCIPIENT,L,DEV,2021-01-22
+MAT-00353,Optimized national process improvement,EXCIPIENT,kg,PHASE_OUT,2025-07-08
+MAT-00354,Organized motivating infrastructure,API,g,DEV,2021-11-17
+MAT-00355,Implemented client-server interface,FINISHED_PRODUCT,mL,DEV,2023-11-21
+MAT-00356,Adaptive web-enabled Internet solution,API,mL,ACTIVE,2024-06-16
+MAT-00357,Reactive executive application,FINISHED_PRODUCT,kg,PHASE_OUT,2023-11-16
+MAT-00358,Implemented context-sensitive matrices,FINISHED_PRODUCT,L,DEV,2023-10-21
+MAT-00359,Right-sized 4thgeneration paradigm,FINISHED_PRODUCT,L,ACTIVE,2022-02-26
+MAT-00360,Face-to-face 5thgeneration functionalities,API,mL,ACTIVE,2022-06-20
+MAT-00361,Synergized secondary budgetary management,FINISHED_PRODUCT,L,DEV,2024-09-12
+MAT-00362,Operative bandwidth-monitored complexity,FINISHED_PRODUCT,kg,DEV,2021-04-27
+MAT-00363,Synchronized tangible open system,EXCIPIENT,L,DEV,2023-08-26
+MAT-00364,Persistent intangible utilization,API,g,ACTIVE,2025-09-24
+MAT-00365,Expanded modular parallelism,EXCIPIENT,mL,ACTIVE,2025-05-24
+MAT-00366,Stand-alone asynchronous policy,API,pcs,ACTIVE,2023-10-06
+MAT-00367,Fundamental uniform task-force,EXCIPIENT,L,DEV,2021-10-10
+MAT-00368,Operative regional infrastructure,FINISHED_PRODUCT,pcs,PHASE_OUT,2022-08-25
+MAT-00369,Universal tangible emulation,FINISHED_PRODUCT,g,PHASE_OUT,2022-04-08
+MAT-00370,Assimilated high-level archive,API,mL,DEV,2023-08-27
+MAT-00371,Reverse-engineered content-based firmware,EXCIPIENT,kg,DEV,2023-11-12
+MAT-00372,Digitized mission-critical protocol,API,mL,PHASE_OUT,2024-08-13
+MAT-00373,Switchable neutral implementation,EXCIPIENT,kg,DEV,2023-11-18
+MAT-00374,Up-sized zero-defect monitoring,FINISHED_PRODUCT,L,ACTIVE,2023-09-16
+MAT-00375,Multi-channeled system-worthy capability,EXCIPIENT,g,ACTIVE,2021-03-09
+MAT-00376,Innovative reciprocal strategy,EXCIPIENT,kg,DEV,2024-10-01
+MAT-00377,Integrated empowering parallelism,FINISHED_PRODUCT,pcs,ACTIVE,2025-08-28
+MAT-00378,Polarized zero administration attitude,EXCIPIENT,g,ACTIVE,2021-07-12
+MAT-00379,Ameliorated heuristic migration,FINISHED_PRODUCT,g,ACTIVE,2021-04-15
+MAT-00380,Streamlined systematic solution,FINISHED_PRODUCT,g,DEV,2024-09-23
+MAT-00381,Advanced 6thgeneration secured line,API,L,ACTIVE,2021-07-08
+MAT-00382,Vision-oriented 6thgeneration project,FINISHED_PRODUCT,kg,PHASE_OUT,2021-02-15
+MAT-00383,Upgradable web-enabled workforce,API,g,DEV,2024-07-14
+MAT-00384,Decentralized holistic hardware,API,kg,DEV,2021-01-30
+MAT-00385,Cross-group modular hub,API,g,ACTIVE,2023-12-07
+MAT-00386,Future-proofed interactive monitoring,API,pcs,PHASE_OUT,2025-11-07
+MAT-00387,Reverse-engineered content-based system engine,API,L,ACTIVE,2025-03-25
+MAT-00388,Enhanced interactive capacity,FINISHED_PRODUCT,mL,DEV,2025-04-21
+MAT-00389,Customizable fresh-thinking protocol,FINISHED_PRODUCT,kg,PHASE_OUT,2023-06-05
+MAT-00390,Proactive static Local Area Network,EXCIPIENT,pcs,DEV,2025-04-30
+MAT-00391,Persevering global intranet,EXCIPIENT,pcs,ACTIVE,2022-06-29
+MAT-00392,Virtual local secured line,API,pcs,PHASE_OUT,2023-05-16
+MAT-00393,Quality-focused maximized project,FINISHED_PRODUCT,kg,ACTIVE,2023-04-04
+MAT-00394,Virtual cohesive extranet,EXCIPIENT,mL,DEV,2025-05-02
+MAT-00395,Public-key contextually-based synergy,EXCIPIENT,mL,ACTIVE,2025-06-27
+MAT-00396,Universal 24hour forecast,EXCIPIENT,pcs,ACTIVE,2025-07-28
+MAT-00397,Visionary fault-tolerant complexity,API,L,DEV,2022-05-23
+MAT-00398,Mandatory contextually-based solution,FINISHED_PRODUCT,pcs,DEV,2024-02-13
+MAT-00399,Sharable zero-defect flexibility,EXCIPIENT,pcs,DEV,2024-04-15
+MAT-00400,Multi-channeled asynchronous protocol,EXCIPIENT,pcs,DEV,2023-07-12
+MAT-00401,Proactive web-enabled approach,API,kg,DEV,2022-04-16
+MAT-00402,Public-key mobile synergy,FINISHED_PRODUCT,g,PHASE_OUT,2023-05-30
+MAT-00403,Operative system-worthy Internet solution,API,mL,PHASE_OUT,2021-04-20
+MAT-00404,Programmable contextually-based paradigm,EXCIPIENT,mL,PHASE_OUT,2021-11-06
+MAT-00405,Team-oriented optimizing framework,API,L,PHASE_OUT,2024-03-09
+MAT-00406,Synchronized dedicated toolset,FINISHED_PRODUCT,L,PHASE_OUT,2025-01-31
+MAT-00407,Reverse-engineered secondary product,FINISHED_PRODUCT,mL,ACTIVE,2025-06-06
+MAT-00408,Organic executive strategy,API,kg,PHASE_OUT,2025-05-26
+MAT-00409,Polarized 24/7 info-mediaries,FINISHED_PRODUCT,L,ACTIVE,2022-10-27
+MAT-00410,Ergonomic client-server moderator,API,pcs,DEV,2022-10-16
+MAT-00411,Universal disintermediate monitoring,EXCIPIENT,kg,PHASE_OUT,2023-12-16
+MAT-00412,Extended empowering customer loyalty,FINISHED_PRODUCT,mL,DEV,2025-08-26
+MAT-00413,Inverse high-level function,EXCIPIENT,pcs,PHASE_OUT,2023-12-20
+MAT-00414,Horizontal high-level protocol,API,pcs,DEV,2024-09-30
+MAT-00415,Networked bandwidth-monitored process improvement,API,mL,ACTIVE,2021-03-10
+MAT-00416,Organic impactful application,API,L,DEV,2023-11-18
+MAT-00417,Upgradable disintermediate open system,API,L,DEV,2024-09-02
+MAT-00418,Networked analyzing moratorium,EXCIPIENT,pcs,DEV,2022-07-02
+MAT-00419,Cloned object-oriented Graphic Interface,FINISHED_PRODUCT,pcs,ACTIVE,2022-07-11
+MAT-00420,Programmable demand-driven neural-net,FINISHED_PRODUCT,L,ACTIVE,2024-12-05
+MAT-00421,Business-focused methodical emulation,EXCIPIENT,L,PHASE_OUT,2023-12-22
+MAT-00422,Robust composite open architecture,API,g,ACTIVE,2022-10-07
+MAT-00423,Inverse multi-tasking capacity,FINISHED_PRODUCT,mL,ACTIVE,2025-02-22
+MAT-00424,Organic value-added array,FINISHED_PRODUCT,kg,ACTIVE,2021-10-03
+MAT-00425,Open-architected holistic monitoring,FINISHED_PRODUCT,g,PHASE_OUT,2023-08-03
+MAT-00426,Grass-roots well-modulated matrix,EXCIPIENT,L,ACTIVE,2023-11-13
+MAT-00427,Universal homogeneous orchestration,EXCIPIENT,L,DEV,2022-08-06
+MAT-00428,Grass-roots empowering extranet,API,kg,ACTIVE,2025-01-21
+MAT-00429,Enterprise-wide dynamic synergy,FINISHED_PRODUCT,kg,DEV,2025-06-25
+MAT-00430,Integrated neutral matrix,EXCIPIENT,mL,DEV,2023-07-25
+MAT-00431,Face-to-face zero tolerance encoding,EXCIPIENT,pcs,PHASE_OUT,2023-08-14
+MAT-00432,Implemented transitional structure,EXCIPIENT,g,DEV,2025-04-20
+MAT-00433,Switchable directional Local Area Network,EXCIPIENT,mL,ACTIVE,2024-05-08
+MAT-00434,Function-based transitional encoding,FINISHED_PRODUCT,pcs,PHASE_OUT,2022-12-26
+MAT-00435,Programmable hybrid attitude,FINISHED_PRODUCT,L,ACTIVE,2024-09-14
+MAT-00436,Configurable bottom-line protocol,EXCIPIENT,pcs,ACTIVE,2025-11-24
+MAT-00437,Optional neutral infrastructure,API,L,ACTIVE,2021-08-21
+MAT-00438,Customizable incremental implementation,API,L,PHASE_OUT,2024-02-07
+MAT-00439,Right-sized mission-critical focus group,API,kg,PHASE_OUT,2021-10-02
+MAT-00440,Cross-group multimedia application,EXCIPIENT,g,ACTIVE,2023-10-23
+MAT-00441,Multi-layered coherent info-mediaries,FINISHED_PRODUCT,g,DEV,2022-10-22
+MAT-00442,Innovative clear-thinking infrastructure,FINISHED_PRODUCT,L,ACTIVE,2023-09-18
+MAT-00443,Distributed didactic core,FINISHED_PRODUCT,kg,PHASE_OUT,2025-11-01
+MAT-00444,Proactive grid-enabled ability,EXCIPIENT,kg,PHASE_OUT,2022-09-17
+MAT-00445,Multi-channeled national Local Area Network,EXCIPIENT,pcs,PHASE_OUT,2021-12-17
+MAT-00446,Pre-emptive dynamic infrastructure,FINISHED_PRODUCT,mL,PHASE_OUT,2025-04-18
+MAT-00447,Robust user-facing pricing structure,EXCIPIENT,kg,PHASE_OUT,2024-12-23
+MAT-00448,User-centric stable customer loyalty,FINISHED_PRODUCT,mL,DEV,2023-11-29
+MAT-00449,Secured regional contingency,API,mL,ACTIVE,2024-07-29
+MAT-00450,Cross-platform even-keeled hub,EXCIPIENT,pcs,PHASE_OUT,2023-01-01
+MAT-00451,Face-to-face asymmetric system engine,API,mL,PHASE_OUT,2021-10-04
+MAT-00452,Adaptive interactive architecture,EXCIPIENT,g,PHASE_OUT,2021-07-28
+MAT-00453,Exclusive mobile Graphic Interface,API,kg,DEV,2022-05-23
+MAT-00454,Managed multi-tasking structure,API,pcs,DEV,2024-11-07
+MAT-00455,Advanced directional capability,EXCIPIENT,L,DEV,2021-05-07
+MAT-00456,Quality-focused neutral extranet,FINISHED_PRODUCT,g,ACTIVE,2025-05-13
+MAT-00457,Triple-buffered mobile functionalities,API,L,ACTIVE,2024-12-19
+MAT-00458,Optimized fault-tolerant methodology,FINISHED_PRODUCT,g,DEV,2025-07-08
+MAT-00459,Fully-configurable solution-oriented conglomeration,API,mL,PHASE_OUT,2021-09-16
+MAT-00460,Enhanced responsive toolset,FINISHED_PRODUCT,pcs,PHASE_OUT,2022-02-14
+MAT-00461,Profound zero tolerance moderator,FINISHED_PRODUCT,pcs,PHASE_OUT,2021-02-04
+MAT-00462,Mandatory 4thgeneration projection,FINISHED_PRODUCT,L,ACTIVE,2023-06-23
+MAT-00463,Down-sized fresh-thinking architecture,API,mL,PHASE_OUT,2022-05-26
+MAT-00464,Enhanced explicit analyzer,EXCIPIENT,L,DEV,2025-08-16
+MAT-00465,Switchable full-range encoding,EXCIPIENT,pcs,ACTIVE,2024-03-14
+MAT-00466,Total full-range interface,EXCIPIENT,mL,ACTIVE,2025-08-15
+MAT-00467,Networked demand-driven archive,EXCIPIENT,L,ACTIVE,2022-04-29
+MAT-00468,Progressive multi-tasking ability,API,pcs,DEV,2023-02-05
+MAT-00469,Cloned tertiary open system,EXCIPIENT,mL,DEV,2022-10-31
+MAT-00470,Synergized coherent task-force,FINISHED_PRODUCT,kg,PHASE_OUT,2021-05-26
+MAT-00471,Universal directional definition,FINISHED_PRODUCT,g,PHASE_OUT,2022-07-19
+MAT-00472,Progressive composite knowledge user,EXCIPIENT,pcs,ACTIVE,2025-08-05
+MAT-00473,Down-sized tertiary help-desk,EXCIPIENT,kg,PHASE_OUT,2021-12-08
+MAT-00474,Cross-platform 4thgeneration function,API,pcs,DEV,2024-12-21
+MAT-00475,Networked mission-critical groupware,API,g,DEV,2023-06-27
+MAT-00476,Reduced local analyzer,EXCIPIENT,pcs,DEV,2022-07-10
+MAT-00477,Re-engineered homogeneous complexity,API,L,PHASE_OUT,2024-05-09
+MAT-00478,Secured client-server function,EXCIPIENT,mL,PHASE_OUT,2022-02-18
+MAT-00479,Business-focused even-keeled groupware,FINISHED_PRODUCT,kg,DEV,2022-04-24
+MAT-00480,Triple-buffered clear-thinking support,EXCIPIENT,kg,PHASE_OUT,2025-05-30
+MAT-00481,Streamlined multi-state Local Area Network,FINISHED_PRODUCT,mL,PHASE_OUT,2024-07-11
+MAT-00482,Team-oriented holistic workforce,FINISHED_PRODUCT,pcs,ACTIVE,2024-01-27
+MAT-00483,Synchronized multi-state extranet,API,pcs,DEV,2025-02-23
+MAT-00484,Diverse static application,EXCIPIENT,L,DEV,2022-01-09
+MAT-00485,Customizable hybrid encryption,FINISHED_PRODUCT,mL,ACTIVE,2022-08-09
+MAT-00486,Team-oriented content-based approach,FINISHED_PRODUCT,kg,PHASE_OUT,2022-10-22
+MAT-00487,Organic interactive initiative,EXCIPIENT,L,ACTIVE,2022-03-08
+MAT-00488,Configurable encompassing alliance,FINISHED_PRODUCT,pcs,ACTIVE,2022-04-26
+MAT-00489,Mandatory regional emulation,FINISHED_PRODUCT,mL,DEV,2023-11-29
+MAT-00490,Diverse context-sensitive model,API,L,PHASE_OUT,2024-12-05
+MAT-00491,Optimized optimizing extranet,API,L,PHASE_OUT,2024-11-11
+MAT-00492,Synergized web-enabled architecture,API,g,ACTIVE,2025-07-04
+MAT-00493,Persevering zero-defect success,EXCIPIENT,kg,DEV,2021-08-14
+MAT-00494,Virtual coherent Local Area Network,FINISHED_PRODUCT,pcs,ACTIVE,2022-03-25
+MAT-00495,Re-contextualized background open architecture,EXCIPIENT,pcs,ACTIVE,2022-08-04
+MAT-00496,Programmable intangible moratorium,EXCIPIENT,g,ACTIVE,2024-12-04
+MAT-00497,Proactive cohesive framework,FINISHED_PRODUCT,pcs,ACTIVE,2021-11-24
+MAT-00498,Robust dynamic artificial intelligence,EXCIPIENT,kg,PHASE_OUT,2023-11-24
+MAT-00499,Multi-layered intangible capability,FINISHED_PRODUCT,g,PHASE_OUT,2022-07-08
+MAT-00500,Assimilated uniform core,EXCIPIENT,mL,ACTIVE,2022-12-12

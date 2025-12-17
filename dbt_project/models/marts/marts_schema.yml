@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: mfg_plant_daily_kpis
+    description: "Daily plant-level KPIs combining batch and order information."
+    columns:
+      - name: manufacturing_site
+        description: "Identifier of the manufacturing site."
+        tests:
+          - not_null
+      - name: calendar_date
+        description: "Calendar date for which KPIs are calculated."
+        tests:
+          - not_null
+      - name: total_batches
+        description: "Total number of batches manufactured on that date at the site."
+      - name: total_quantity
+        description: "Total manufactured quantity on that date at the site."
+      - name: total_orders
+        description: "Total number of orders with planned_start_date on that date at the site."
+
+  - name: mfg_ml_features_orders
+    description: "ML-ready feature table at order grain to predict delays and lateness."
+    columns:
+      - name: order_id
+        description: "Business key of the production order."
+        tests:
+          - not_null
+          - unique
+      - name: is_late
+        description: "Binary label for whether the order finished after planned_end_date."
+      - name: delay_vs_plan_days
+        description: "Numerical label for how many days late/early the order was."
+      - name: manufacturing_site
+        description: "Manufacturing site where the order's batch is produced."
+      - name: line_id
+        description: "Manufacturing line identifier."

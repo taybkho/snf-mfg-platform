@@ -1,0 +1,62 @@
+[2025-12-17T13:04:23.897+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:04:23.935+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.ingest_raw_to_snowflake manual__2025-12-17T12:56:30.883844+00:00 [queued]>
+[2025-12-17T13:04:23.944+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.ingest_raw_to_snowflake manual__2025-12-17T12:56:30.883844+00:00 [queued]>
+[2025-12-17T13:04:23.945+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T13:04:23.960+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_raw_to_snowflake> on 2025-12-17 12:56:30.883844+00:00
+[2025-12-17T13:04:23.968+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'ingest_raw_to_snowflake', 'manual__2025-12-17T12:56:30.883844+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmp8wwo4v5g']
+[2025-12-17T13:04:23.971+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask ingest_raw_to_snowflake
+[2025-12-17T13:04:23.972+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=695) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:04:23.972+0000] {standard_task_runner.py:63} INFO - Started process 696 to run task
+[2025-12-17T13:04:24.043+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.ingest_raw_to_snowflake manual__2025-12-17T12:56:30.883844+00:00 [running]> on host 84fc30c39b31
+[2025-12-17T13:04:24.152+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='ingest_raw_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T12:56:30.883844+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T12:56:30.883844+00:00'
+[2025-12-17T13:04:24.153+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:04:24.173+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T13:04:24.174+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/ingestion/python/load_raw_to_snowflake.py']
+[2025-12-17T13:04:24.183+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T13:04:26.560+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:26 - No .env at project root; assuming env vars are injected (Docker/Airflow).
+[2025-12-17T13:04:26.565+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:26 - Starting run-aware load. load_id=mfg_raw_ingestion_dag::manual__2025-12-17T12:56:30.883844+00:00 dag_id=mfg_raw_ingestion_dag run_id=manual__2025-12-17T12:56:30.883844+00:00 task_id=ingest_raw_to_snowflake
+[2025-12-17T13:04:26.566+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:26 - Using data directory: /opt/***/data/raw/source_system
+[2025-12-17T13:04:26.566+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:26 - Connecting to Snowflake...
+[2025-12-17T13:04:31.384+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:31 - Read 500 rows from materials.csv
+[2025-12-17T13:04:31.427+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:31 - Read 10,000 rows from batches.csv
+[2025-12-17T13:04:31.459+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:31 - Read 10,000 rows from production_orders.csv
+[2025-12-17T13:04:31.461+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:31 - [MATERIALS_RUN] Deleting previous slice for load_id (retry-safe)...
+[2025-12-17T13:04:31.970+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:31 - [MATERIALS_RUN] Loading 500 rows from materials.csv ...
+[2025-12-17T13:04:35.386+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:35 - [MATERIALS_RUN] write_pandas success=True rows_loaded=500 chunks=1
+[2025-12-17T13:04:35.952+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:35 - [BATCHES_RUN] Deleting previous slice for load_id (retry-safe)...
+[2025-12-17T13:04:36.471+0000] {subprocess.py:93} INFO - [INFO] 2025-12-17 13:04:36 - [BATCHES_RUN] Loading 10,000 rows from batches.csv ...
+[2025-12-17T13:04:39.095+0000] {local_task_job_runner.py:310} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-12-17T13:04:39.096+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T13:04:39.098+0000] {process_utils.py:132} INFO - Sending 15 to group 696. PIDs of all processes in the group: [697, 696]
+[2025-12-17T13:04:39.099+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 696
+[2025-12-17T13:04:39.099+0000] {taskinstance.py:2607} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-12-17T13:04:39.100+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-12-17T13:04:39.101+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:04:39.117+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 234, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2609, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-12-17T13:04:39.122+0000] {taskinstance.py:1205} INFO - Marking task as UP_FOR_RETRY. dag_id=mfg_raw_ingestion_dag, task_id=ingest_raw_to_snowflake, execution_date=20251217T125630, start_date=20251217T130423, end_date=20251217T130439
+[2025-12-17T13:04:39.136+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 6 for task ingest_raw_to_snowflake ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(mfg_raw_ingestion_dag, ingest_raw_to_snowflake, manual__2025-12-17T12:56:30.883844+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'ingest_raw_to_snowflake', 'dag_id': 'mfg_raw_ingestion_dag', 'run_id': 'manual__2025-12-17T12:56:30.883844+00:00', 'map_index': -1, 'start_date': datetime.datetime(2025, 12, 17, 13, 4, 23, 935740, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2025, 12, 17, 13, 4, 39, 121571, tzinfo=Timezone('UTC')), 'duration': 15}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 696)
+[2025-12-17T13:04:39.152+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=697, status='terminated', started='13:04:23') (697) terminated with exit code None
+[2025-12-17T13:04:39.153+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=696, status='terminated', exitcode=1, started='13:04:23') (696) terminated with exit code 1

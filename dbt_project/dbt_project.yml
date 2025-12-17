@@ -1,0 +1,34 @@
+name: "mfg_accelerator"
+version: "1.0.0"
+config-version: 2
+
+profile: "mfg_accelerator"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+# Optional but good hygiene
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  mfg_accelerator:
+    # IMPORTANT:
+    # Do not set a global +schema (it appends to target.schema and creates duplicates like STAGING_ANALYTICS)
+
+    staging:
+      +schema: STAGING
+      +materialized: view
+
+    core:
+      +schema: CORE
+      +materialized: table
+
+    marts:
+      +schema: MARTS
+      +materialized: table
