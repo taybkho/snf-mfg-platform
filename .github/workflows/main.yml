@@ -1,0 +1,7 @@
+- name: Lint Python
+  run: |
+    pip install ruff
+    ruff .
+
+- name: Security scan
+  uses: trufflesecurity/trufflehog@main
