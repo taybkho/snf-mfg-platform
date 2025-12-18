@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: golang
+Version: 0.0.3
+Summary: golang
+Home-page: https://github.com/menduo/golang
+Author: menduo
+Author-email: shimenduo@gmail.com
+License: MIT
+Keywords: golang,golang
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: black ==24.* ; extra == 'dev'
+Requires-Dist: flake8 ==7.* ; extra == 'dev'
+Requires-Dist: isort ==5.* ; extra == 'dev'
+Requires-Dist: pytest ==8.* ; extra == 'dev'
+
+see more at: https://github.com/menduo/golang 
+
+# golang
+
+Run Go code in Python.
+
+⚠️: WIP
+
+# install
+
+```shell
+pip install golang
+```
+
+or
+
+```shell
+pip install git+ssh://git@github.com/menduo/golang.git
+```
+
+# example
+
+## run code
+
+```python
+import golang
+
+code = """
+package main
+import "fmt"
+
+func main(){
+    fmt.Println("Hello World from github.com/menduo/golang")
+}
+"""
+golang.run_code(code)
+```
+
+## run file
+
+```python
+import golang
+
+filepath = "~/ws/contrib/golang/golang/testdata/gocode/code1/main.go"
+golang.run_file(filepath)
+```
+
+
+
+
