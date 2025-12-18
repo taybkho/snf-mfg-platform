@@ -1,0 +1,81 @@
+[2025-12-17T13:46:51.009+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:46:51.055+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_dbt_transform_dag.dbt_test_all manual__2025-12-17T13:44:53.762140+00:00 [queued]>
+[2025-12-17T13:46:51.066+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_dbt_transform_dag.dbt_test_all manual__2025-12-17T13:44:53.762140+00:00 [queued]>
+[2025-12-17T13:46:51.067+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T13:46:51.085+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_test_all> on 2025-12-17 13:44:53.762140+00:00
+[2025-12-17T13:46:51.097+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_dbt_transform_dag', 'dbt_test_all', 'manual__2025-12-17T13:44:53.762140+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/mfg_dbt_transform_dag.py', '--cfg-path', '/tmp/tmp3cw6j03x']
+[2025-12-17T13:46:51.100+0000] {standard_task_runner.py:91} INFO - Job 20: Subtask dbt_test_all
+[2025-12-17T13:46:51.100+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=622) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:46:51.102+0000] {standard_task_runner.py:63} INFO - Started process 623 to run task
+[2025-12-17T13:46:51.176+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_dbt_transform_dag.dbt_test_all manual__2025-12-17T13:44:53.762140+00:00 [running]> on host 8717822a88d5
+[2025-12-17T13:46:51.301+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_dbt_transform_dag' AIRFLOW_CTX_TASK_ID='dbt_test_all' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T13:44:53.762140+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T13:44:53.762140+00:00'
+[2025-12-17T13:46:51.302+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:46:51.322+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T13:46:51.323+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt test --profiles-dir /opt/***/dbt_profiles']
+[2025-12-17T13:46:51.333+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T13:46:53.887+0000] {subprocess.py:93} INFO - [0m13:46:53  Running with dbt=1.8.4
+[2025-12-17T13:46:55.116+0000] {subprocess.py:93} INFO - [0m13:46:55  Registered adapter: snowflake=1.8.4
+[2025-12-17T13:46:56.079+0000] {subprocess.py:93} INFO - [0m13:46:56  Found 8 models, 24 data tests, 3 sources, 460 macros
+[2025-12-17T13:46:56.085+0000] {subprocess.py:93} INFO - [0m13:46:56
+[2025-12-17T13:46:57.776+0000] {subprocess.py:93} INFO - [0m13:46:57  Concurrency: 4 threads (target='dev')
+[2025-12-17T13:46:57.777+0000] {subprocess.py:93} INFO - [0m13:46:57
+[2025-12-17T13:46:57.793+0000] {subprocess.py:93} INFO - [0m13:46:57  1 of 24 START test not_null_core_batches_batch_id .............................. [RUN]
+[2025-12-17T13:46:57.795+0000] {subprocess.py:93} INFO - [0m13:46:57  2 of 24 START test not_null_core_batches_material_id ........................... [RUN]
+[2025-12-17T13:46:57.796+0000] {subprocess.py:93} INFO - [0m13:46:57  3 of 24 START test not_null_core_materials_material_id ......................... [RUN]
+[2025-12-17T13:46:57.798+0000] {subprocess.py:93} INFO - [0m13:46:57  4 of 24 START test not_null_fct_production_orders_batch_id ..................... [RUN]
+[2025-12-17T13:46:59.518+0000] {subprocess.py:93} INFO - [0m13:46:59  4 of 24 PASS not_null_fct_production_orders_batch_id ........................... [[32mPASS[0m in 1.71s]
+[2025-12-17T13:46:59.523+0000] {subprocess.py:93} INFO - [0m13:46:59  5 of 24 START test not_null_fct_production_orders_order_id ..................... [RUN]
+[2025-12-17T13:46:59.609+0000] {subprocess.py:93} INFO - [0m13:46:59  3 of 24 PASS not_null_core_materials_material_id ............................... [[32mPASS[0m in 1.81s]
+[2025-12-17T13:46:59.615+0000] {subprocess.py:93} INFO - [0m13:46:59  6 of 24 START test not_null_mfg_ml_features_orders_order_id .................... [RUN]
+[2025-12-17T13:46:59.652+0000] {subprocess.py:93} INFO - [0m13:46:59  1 of 24 PASS not_null_core_batches_batch_id .................................... [[32mPASS[0m in 1.85s]
+[2025-12-17T13:46:59.657+0000] {subprocess.py:93} INFO - [0m13:46:59  7 of 24 START test not_null_mfg_plant_daily_kpis_calendar_date ................. [RUN]
+[2025-12-17T13:46:59.681+0000] {subprocess.py:93} INFO - [0m13:46:59  2 of 24 PASS not_null_core_batches_material_id ................................. [[32mPASS[0m in 1.88s]
+[2025-12-17T13:46:59.688+0000] {subprocess.py:93} INFO - [0m13:46:59  8 of 24 START test not_null_mfg_plant_daily_kpis_manufacturing_site ............ [RUN]
+[2025-12-17T13:47:01.184+0000] {subprocess.py:93} INFO - [0m13:47:01  5 of 24 PASS not_null_fct_production_orders_order_id ........................... [[32mPASS[0m in 1.66s]
+[2025-12-17T13:47:01.189+0000] {subprocess.py:93} INFO - [0m13:47:01  9 of 24 START test not_null_stg_batches_batch_id ............................... [RUN]
+[2025-12-17T13:47:01.326+0000] {subprocess.py:93} INFO - [0m13:47:01  8 of 24 PASS not_null_mfg_plant_daily_kpis_manufacturing_site .................. [[32mPASS[0m in 1.64s]
+[2025-12-17T13:47:01.332+0000] {subprocess.py:93} INFO - [0m13:47:01  10 of 24 START test not_null_stg_batches_material_id ........................... [RUN]
+[2025-12-17T13:47:01.389+0000] {subprocess.py:93} INFO - [0m13:47:01  7 of 24 PASS not_null_mfg_plant_daily_kpis_calendar_date ....................... [[32mPASS[0m in 1.73s]
+[2025-12-17T13:47:01.395+0000] {subprocess.py:93} INFO - [0m13:47:01  11 of 24 START test not_null_stg_materials_material_id ......................... [RUN]
+[2025-12-17T13:47:01.450+0000] {subprocess.py:93} INFO - [0m13:47:01  6 of 24 PASS not_null_mfg_ml_features_orders_order_id .......................... [[32mPASS[0m in 1.83s]
+[2025-12-17T13:47:01.462+0000] {subprocess.py:93} INFO - [0m13:47:01  12 of 24 START test not_null_stg_production_orders_batch_id .................... [RUN]
+[2025-12-17T13:47:03.266+0000] {subprocess.py:93} INFO - [0m13:47:03  11 of 24 PASS not_null_stg_materials_material_id ............................... [[32mPASS[0m in 1.87s]
+[2025-12-17T13:47:03.272+0000] {subprocess.py:93} INFO - [0m13:47:03  13 of 24 START test not_null_stg_production_orders_order_id .................... [RUN]
+[2025-12-17T13:47:03.296+0000] {subprocess.py:93} INFO - [0m13:47:03  9 of 24 PASS not_null_stg_batches_batch_id ..................................... [[32mPASS[0m in 2.10s]
+[2025-12-17T13:47:03.309+0000] {subprocess.py:93} INFO - [0m13:47:03  14 of 24 START test relationships_core_batches_material_id__material_id__ref_core_materials_  [RUN]
+[2025-12-17T13:47:03.496+0000] {subprocess.py:93} INFO - [0m13:47:03  12 of 24 PASS not_null_stg_production_orders_batch_id .......................... [[32mPASS[0m in 2.03s]
+[2025-12-17T13:47:03.501+0000] {subprocess.py:93} INFO - [0m13:47:03  15 of 24 START test relationships_fct_production_orders_batch_id__batch_id__ref_core_batches_  [RUN]
+[2025-12-17T13:47:03.547+0000] {subprocess.py:93} INFO - [0m13:47:03  10 of 24 PASS not_null_stg_batches_material_id ................................. [[32mPASS[0m in 2.21s]
+[2025-12-17T13:47:03.558+0000] {subprocess.py:93} INFO - [0m13:47:03  16 of 24 START test relationships_stg_batches_material_id__material_id__ref_stg_materials_  [RUN]
+[2025-12-17T13:47:05.021+0000] {subprocess.py:93} INFO - [0m13:47:05  13 of 24 PASS not_null_stg_production_orders_order_id .......................... [[32mPASS[0m in 1.75s]
+[2025-12-17T13:47:05.026+0000] {subprocess.py:93} INFO - [0m13:47:05  14 of 24 PASS relationships_core_batches_material_id__material_id__ref_core_materials_  [[32mPASS[0m in 1.71s]
+[2025-12-17T13:47:05.032+0000] {subprocess.py:93} INFO - [0m13:47:05  17 of 24 START test relationships_stg_production_orders_batch_id__batch_id__ref_stg_batches_  [RUN]
+[2025-12-17T13:47:05.037+0000] {subprocess.py:93} INFO - [0m13:47:05  18 of 24 START test unique_core_batches_batch_id ............................... [RUN]
+[2025-12-17T13:47:05.196+0000] {subprocess.py:93} INFO - [0m13:47:05  15 of 24 PASS relationships_fct_production_orders_batch_id__batch_id__ref_core_batches_  [[32mPASS[0m in 1.69s]
+[2025-12-17T13:47:05.203+0000] {subprocess.py:93} INFO - [0m13:47:05  19 of 24 START test unique_core_materials_material_id .......................... [RUN]
+[2025-12-17T13:47:05.832+0000] {subprocess.py:93} INFO - [0m13:47:05  16 of 24 PASS relationships_stg_batches_material_id__material_id__ref_stg_materials_  [[32mPASS[0m in 2.27s]
+[2025-12-17T13:47:05.838+0000] {subprocess.py:93} INFO - [0m13:47:05  20 of 24 START test unique_fct_production_orders_order_id ...................... [RUN]
+[2025-12-17T13:47:06.774+0000] {subprocess.py:93} INFO - [0m13:47:06  18 of 24 PASS unique_core_batches_batch_id ..................................... [[32mPASS[0m in 1.73s]
+[2025-12-17T13:47:06.780+0000] {subprocess.py:93} INFO - [0m13:47:06  21 of 24 START test unique_mfg_ml_features_orders_order_id ..................... [RUN]
+[2025-12-17T13:47:06.817+0000] {subprocess.py:93} INFO - [0m13:47:06  17 of 24 PASS relationships_stg_production_orders_batch_id__batch_id__ref_stg_batches_  [[32mPASS[0m in 1.78s]
+[2025-12-17T13:47:06.823+0000] {subprocess.py:93} INFO - [0m13:47:06  22 of 24 START test unique_stg_batches_batch_id ................................ [RUN]
+[2025-12-17T13:47:06.951+0000] {subprocess.py:93} INFO - [0m13:47:06  19 of 24 PASS unique_core_materials_material_id ................................ [[32mPASS[0m in 1.74s]
+[2025-12-17T13:47:06.961+0000] {subprocess.py:93} INFO - [0m13:47:06  23 of 24 START test unique_stg_materials_material_id ........................... [RUN]
+[2025-12-17T13:47:07.453+0000] {subprocess.py:93} INFO - [0m13:47:07  20 of 24 PASS unique_fct_production_orders_order_id ............................ [[32mPASS[0m in 1.61s]
+[2025-12-17T13:47:07.460+0000] {subprocess.py:93} INFO - [0m13:47:07  24 of 24 START test unique_stg_production_orders_order_id ...................... [RUN]
+[2025-12-17T13:47:08.717+0000] {subprocess.py:93} INFO - [0m13:47:08  22 of 24 PASS unique_stg_batches_batch_id ...................................... [[32mPASS[0m in 1.89s]
+[2025-12-17T13:47:08.943+0000] {subprocess.py:93} INFO - [0m13:47:08  21 of 24 PASS unique_mfg_ml_features_orders_order_id ........................... [[32mPASS[0m in 2.16s]
+[2025-12-17T13:47:09.032+0000] {subprocess.py:93} INFO - [0m13:47:09  23 of 24 PASS unique_stg_materials_material_id ................................. [[32mPASS[0m in 2.06s]
+[2025-12-17T13:47:09.753+0000] {subprocess.py:93} INFO - [0m13:47:09  24 of 24 PASS unique_stg_production_orders_order_id ............................ [[32mPASS[0m in 2.29s]
+[2025-12-17T13:47:09.769+0000] {subprocess.py:93} INFO - [0m13:47:09
+[2025-12-17T13:47:09.771+0000] {subprocess.py:93} INFO - [0m13:47:09  Finished running 24 data tests in 0 hours 0 minutes and 13.68 seconds (13.68s).
+[2025-12-17T13:47:09.891+0000] {subprocess.py:93} INFO - [0m13:47:09
+[2025-12-17T13:47:09.896+0000] {subprocess.py:93} INFO - [0m13:47:09  [32mCompleted successfully[0m
+[2025-12-17T13:47:09.898+0000] {subprocess.py:93} INFO - [0m13:47:09
+[2025-12-17T13:47:09.900+0000] {subprocess.py:93} INFO - [0m13:47:09  Done. PASS=24 WARN=0 ERROR=0 SKIP=0 TOTAL=24
+[2025-12-17T13:47:11.105+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T13:47:11.106+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:47:11.151+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_dbt_transform_dag, task_id=dbt_test_all, execution_date=20251217T134453, start_date=20251217T134651, end_date=20251217T134711
+[2025-12-17T13:47:11.195+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T13:47:11.228+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T13:47:11.232+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

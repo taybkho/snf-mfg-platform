@@ -1,0 +1,39 @@
+[2025-12-17T13:46:20.397+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:46:20.435+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_dbt_transform_dag.dbt_run_core manual__2025-12-17T13:44:53.762140+00:00 [queued]>
+[2025-12-17T13:46:20.444+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_dbt_transform_dag.dbt_run_core manual__2025-12-17T13:44:53.762140+00:00 [queued]>
+[2025-12-17T13:46:20.445+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T13:46:20.459+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run_core> on 2025-12-17 13:44:53.762140+00:00
+[2025-12-17T13:46:20.466+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_dbt_transform_dag', 'dbt_run_core', 'manual__2025-12-17T13:44:53.762140+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/mfg_dbt_transform_dag.py', '--cfg-path', '/tmp/tmpk31j_igm']
+[2025-12-17T13:46:20.470+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask dbt_run_core
+[2025-12-17T13:46:20.470+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=496) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:46:20.471+0000] {standard_task_runner.py:63} INFO - Started process 497 to run task
+[2025-12-17T13:46:20.532+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_dbt_transform_dag.dbt_run_core manual__2025-12-17T13:44:53.762140+00:00 [running]> on host 8717822a88d5
+[2025-12-17T13:46:20.635+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_dbt_transform_dag' AIRFLOW_CTX_TASK_ID='dbt_run_core' AIRFLOW_CTX_EXECUTION_DATE='2025-12-17T13:44:53.762140+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-17T13:44:53.762140+00:00'
+[2025-12-17T13:46:20.636+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:46:20.654+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T13:46:20.655+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/dbt_project && dbt run --select core --profiles-dir /opt/***/dbt_profiles']
+[2025-12-17T13:46:20.663+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T13:46:22.826+0000] {subprocess.py:93} INFO - [0m13:46:22  Running with dbt=1.8.4
+[2025-12-17T13:46:24.225+0000] {subprocess.py:93} INFO - [0m13:46:24  Registered adapter: snowflake=1.8.4
+[2025-12-17T13:46:25.162+0000] {subprocess.py:93} INFO - [0m13:46:25  Found 8 models, 24 data tests, 3 sources, 460 macros
+[2025-12-17T13:46:25.169+0000] {subprocess.py:93} INFO - [0m13:46:25
+[2025-12-17T13:46:29.450+0000] {subprocess.py:93} INFO - [0m13:46:29  Concurrency: 4 threads (target='dev')
+[2025-12-17T13:46:29.452+0000] {subprocess.py:93} INFO - [0m13:46:29
+[2025-12-17T13:46:29.467+0000] {subprocess.py:93} INFO - [0m13:46:29  1 of 3 START sql table model CORE.core_materials ............................... [RUN]
+[2025-12-17T13:46:32.257+0000] {subprocess.py:93} INFO - [0m13:46:32  1 of 3 OK created sql table model CORE.core_materials .......................... [[32mSUCCESS 1[0m in 2.78s]
+[2025-12-17T13:46:32.263+0000] {subprocess.py:93} INFO - [0m13:46:32  2 of 3 START sql table model CORE.core_batches ................................. [RUN]
+[2025-12-17T13:46:32.265+0000] {subprocess.py:93} INFO - [0m13:46:32  3 of 3 START sql table model CORE.fct_production_orders ........................ [RUN]
+[2025-12-17T13:46:35.172+0000] {subprocess.py:93} INFO - [0m13:46:35  3 of 3 OK created sql table model CORE.fct_production_orders ................... [[32mSUCCESS 1[0m in 2.90s]
+[2025-12-17T13:46:35.620+0000] {subprocess.py:93} INFO - [0m13:46:35  2 of 3 OK created sql table model CORE.core_batches ............................ [[32mSUCCESS 1[0m in 3.35s]
+[2025-12-17T13:46:35.642+0000] {subprocess.py:93} INFO - [0m13:46:35
+[2025-12-17T13:46:35.645+0000] {subprocess.py:93} INFO - [0m13:46:35  Finished running 3 table models in 0 hours 0 minutes and 10.47 seconds (10.47s).
+[2025-12-17T13:46:35.718+0000] {subprocess.py:93} INFO - [0m13:46:35
+[2025-12-17T13:46:35.720+0000] {subprocess.py:93} INFO - [0m13:46:35  [32mCompleted successfully[0m
+[2025-12-17T13:46:35.721+0000] {subprocess.py:93} INFO - [0m13:46:35
+[2025-12-17T13:46:35.722+0000] {subprocess.py:93} INFO - [0m13:46:35  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[2025-12-17T13:46:36.664+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T13:46:36.665+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:46:36.700+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_dbt_transform_dag, task_id=dbt_run_core, execution_date=20251217T134453, start_date=20251217T134620, end_date=20251217T134636
+[2025-12-17T13:46:36.723+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T13:46:36.764+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T13:46:36.770+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

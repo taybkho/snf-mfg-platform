@@ -1,0 +1,342 @@
+[2025-12-17T10:09:49.193+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T10:09:49.230+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:09:49.238+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:09:49.239+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T10:09:49.255+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T10:09:49.263+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmpl0akuhd9']
+[2025-12-17T10:09:49.266+0000] {standard_task_runner.py:91} INFO - Job 20: Subtask debug_env_and_paths
+[2025-12-17T10:09:49.266+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2193) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T10:09:49.267+0000] {standard_task_runner.py:63} INFO - Started process 2194 to run task
+[2025-12-17T10:09:49.329+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host 68b68f67a494
+[2025-12-17T10:09:49.446+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T10:09:49.448+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T10:09:49.463+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T10:09:49.464+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T10:09:49.471+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T10:09:49.474+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmpw6pykvnm
+[2025-12-17T10:09:49.477+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T10:09:49.486+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T10:09:49.487+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:09:49.488+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 09:27 ..
+[2025-12-17T10:09:49.489+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  668 Dec 13 17:23 dbt_project.yml
+[2025-12-17T10:09:49.490+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T10:09:49.491+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T10:09:49.491+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T10:09:49.492+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T10:09:49.498+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T10:09:49.499+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:09:49.499+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 09:27 ..
+[2025-12-17T10:09:49.500+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T10:09:49.500+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  622 Dec 17 07:23 profiles.yml
+[2025-12-17T10:09:49.501+0000] {subprocess.py:93} INFO - /usr/bin/bash: line 9: dbt: command not found
+[2025-12-17T10:09:49.504+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T10:09:49.505+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T10:09:49.506+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T10:09:49.506+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T10:09:49.506+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T10:09:49.507+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T10:09:49.507+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T10:09:49.508+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T10:09:49.509+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T10:09:49.541+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T100949, end_date=20251217T100949
+[2025-12-17T10:09:49.562+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T10:09:49.588+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T10:09:49.593+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T10:28:40.549+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T10:28:40.600+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:28:40.611+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:28:40.612+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T10:28:40.629+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T10:28:40.638+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmputfq6kng']
+[2025-12-17T10:28:40.641+0000] {standard_task_runner.py:91} INFO - Job 31: Subtask debug_env_and_paths
+[2025-12-17T10:28:40.641+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=327) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T10:28:40.642+0000] {standard_task_runner.py:63} INFO - Started process 328 to run task
+[2025-12-17T10:28:40.718+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host a197bc4252bf
+[2025-12-17T10:28:40.837+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T10:28:40.839+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T10:28:40.858+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T10:28:40.860+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T10:28:40.870+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T10:28:40.873+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmprjeno0as
+[2025-12-17T10:28:40.876+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T10:28:40.887+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T10:28:40.887+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:28:40.888+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 10:26 ..
+[2025-12-17T10:28:40.889+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  668 Dec 13 17:23 dbt_project.yml
+[2025-12-17T10:28:40.889+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T10:28:40.890+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T10:28:40.891+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T10:28:40.891+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T10:28:40.897+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T10:28:40.898+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:28:40.900+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 10:26 ..
+[2025-12-17T10:28:40.901+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T10:28:40.902+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  622 Dec 17 07:23 profiles.yml
+[2025-12-17T10:28:40.903+0000] {subprocess.py:93} INFO - /home/***/.local/bin/dbt
+[2025-12-17T10:28:43.516+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-12-17T10:28:43.517+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/dbt", line 5, in <module>
+[2025-12-17T10:28:43.518+0000] {subprocess.py:93} INFO -     from dbt.cli.main import cli
+[2025-12-17T10:28:43.518+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/__init__.py", line 1, in <module>
+[2025-12-17T10:28:43.519+0000] {subprocess.py:93} INFO -     from .main import cli as dbt_cli  # noqa
+[2025-12-17T10:28:43.519+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-12-17T10:28:43.520+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/main.py", line 14, in <module>
+[2025-12-17T10:28:43.521+0000] {subprocess.py:93} INFO -     from dbt.cli import params as p
+[2025-12-17T10:28:43.521+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/params.py", line 13, in <module>
+[2025-12-17T10:28:43.522+0000] {subprocess.py:93} INFO -     from dbt.cli.options import MultiOption
+[2025-12-17T10:28:43.522+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/options.py", line 6, in <module>
+[2025-12-17T10:28:43.523+0000] {subprocess.py:93} INFO -     from click.parser import _OptionParser, _ParsingState
+[2025-12-17T10:28:43.523+0000] {subprocess.py:93} INFO - ImportError: cannot import name '_OptionParser' from 'click.parser' (/home/***/.local/lib/python3.12/site-packages/click/parser.py). Did you mean: 'OptionParser'?
+[2025-12-17T10:28:43.701+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T10:28:43.702+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T10:28:43.703+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T10:28:43.703+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T10:28:43.704+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T10:28:43.704+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T10:28:43.705+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T10:28:43.706+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T10:28:43.707+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T10:28:43.744+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T102840, end_date=20251217T102843
+[2025-12-17T10:28:43.790+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T10:28:43.825+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T10:28:43.830+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T10:57:50.998+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T10:57:51.033+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:57:51.041+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T10:57:51.041+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T10:57:51.055+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T10:57:51.062+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmp91sae2y8']
+[2025-12-17T10:57:51.065+0000] {standard_task_runner.py:91} INFO - Job 5: Subtask debug_env_and_paths
+[2025-12-17T10:57:51.065+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=589) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T10:57:51.066+0000] {standard_task_runner.py:63} INFO - Started process 590 to run task
+[2025-12-17T10:57:51.128+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host ada33a2b5ec7
+[2025-12-17T10:57:51.229+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T10:57:51.230+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T10:57:51.244+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T10:57:51.246+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T10:57:51.254+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T10:57:51.256+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmpoz_4w2sx
+[2025-12-17T10:57:51.257+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T10:57:51.270+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T10:57:51.271+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:57:51.271+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 10:55 ..
+[2025-12-17T10:57:51.272+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  668 Dec 13 17:23 dbt_project.yml
+[2025-12-17T10:57:51.272+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T10:57:51.273+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T10:57:51.273+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T10:57:51.274+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T10:57:51.280+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T10:57:51.280+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T10:57:51.281+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 10:55 ..
+[2025-12-17T10:57:51.282+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T10:57:51.282+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  622 Dec 17 07:23 profiles.yml
+[2025-12-17T10:57:51.283+0000] {subprocess.py:93} INFO - /home/***/.local/bin/dbt
+[2025-12-17T10:57:54.621+0000] {subprocess.py:93} INFO - Core:
+[2025-12-17T10:57:54.622+0000] {subprocess.py:93} INFO -   - installed: 1.8.4
+[2025-12-17T10:57:54.623+0000] {subprocess.py:93} INFO -   - latest:    1.10.16 - Update available!
+[2025-12-17T10:57:54.624+0000] {subprocess.py:93} INFO - 
+[2025-12-17T10:57:54.624+0000] {subprocess.py:93} INFO -   Your version of dbt-core is out of date!
+[2025-12-17T10:57:54.625+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T10:57:54.625+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T10:57:54.626+0000] {subprocess.py:93} INFO - 
+[2025-12-17T10:57:54.627+0000] {subprocess.py:93} INFO - Plugins:
+[2025-12-17T10:57:54.627+0000] {subprocess.py:93} INFO -   - snowflake: 1.8.4 - Update available!
+[2025-12-17T10:57:54.628+0000] {subprocess.py:93} INFO - 
+[2025-12-17T10:57:54.628+0000] {subprocess.py:93} INFO -   At least one plugin is out of date or incompatible with dbt-core.
+[2025-12-17T10:57:54.629+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T10:57:54.630+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T10:57:54.630+0000] {subprocess.py:93} INFO - 
+[2025-12-17T10:57:54.631+0000] {subprocess.py:93} INFO - 
+[2025-12-17T10:57:54.906+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T10:57:54.907+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T10:57:54.908+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T10:57:54.908+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T10:57:54.909+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T10:57:54.910+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T10:57:54.910+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T10:57:54.911+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T10:57:54.912+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T10:57:54.944+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T105751, end_date=20251217T105754
+[2025-12-17T10:57:54.978+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T10:57:55.012+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T10:57:55.017+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T12:57:02.904+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T12:57:02.941+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T12:57:02.950+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T12:57:02.951+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T12:57:02.967+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T12:57:02.974+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmpj_qyl49a']
+[2025-12-17T12:57:02.977+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask debug_env_and_paths
+[2025-12-17T12:57:02.979+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=258) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T12:57:02.980+0000] {standard_task_runner.py:63} INFO - Started process 259 to run task
+[2025-12-17T12:57:03.047+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host 84fc30c39b31
+[2025-12-17T12:57:03.156+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T12:57:03.159+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T12:57:03.181+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T12:57:03.183+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T12:57:03.194+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T12:57:03.197+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmpol4t0dab
+[2025-12-17T12:57:03.198+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T12:57:03.213+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T12:57:03.213+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T12:57:03.214+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 12:55 ..
+[2025-12-17T12:57:03.215+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  491 Dec 17 12:47 dbt_project.yml
+[2025-12-17T12:57:03.215+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T12:57:03.216+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T12:57:03.216+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T12:57:03.217+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T12:57:03.223+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T12:57:03.224+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T12:57:03.225+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 12:55 ..
+[2025-12-17T12:57:03.225+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T12:57:03.226+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  457 Dec 17 12:50 profiles.yml
+[2025-12-17T12:57:03.227+0000] {subprocess.py:93} INFO - /home/***/.local/bin/dbt
+[2025-12-17T12:57:07.005+0000] {subprocess.py:93} INFO - Core:
+[2025-12-17T12:57:07.006+0000] {subprocess.py:93} INFO -   - installed: 1.8.4
+[2025-12-17T12:57:07.006+0000] {subprocess.py:93} INFO -   - latest:    1.10.16 - Update available!
+[2025-12-17T12:57:07.007+0000] {subprocess.py:93} INFO - 
+[2025-12-17T12:57:07.008+0000] {subprocess.py:93} INFO -   Your version of dbt-core is out of date!
+[2025-12-17T12:57:07.008+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T12:57:07.009+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T12:57:07.009+0000] {subprocess.py:93} INFO - 
+[2025-12-17T12:57:07.010+0000] {subprocess.py:93} INFO - Plugins:
+[2025-12-17T12:57:07.010+0000] {subprocess.py:93} INFO -   - snowflake: 1.8.4 - Update available!
+[2025-12-17T12:57:07.011+0000] {subprocess.py:93} INFO - 
+[2025-12-17T12:57:07.012+0000] {subprocess.py:93} INFO -   At least one plugin is out of date or incompatible with dbt-core.
+[2025-12-17T12:57:07.012+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T12:57:07.013+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T12:57:07.013+0000] {subprocess.py:93} INFO - 
+[2025-12-17T12:57:07.014+0000] {subprocess.py:93} INFO - 
+[2025-12-17T12:57:07.274+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T12:57:07.275+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T12:57:07.276+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T12:57:07.276+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T12:57:07.277+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T12:57:07.277+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T12:57:07.278+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T12:57:07.278+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T12:57:07.279+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T12:57:07.313+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T125702, end_date=20251217T125707
+[2025-12-17T12:57:07.332+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T12:57:07.367+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T12:57:07.372+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T13:11:48.514+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:11:48.558+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T13:11:48.568+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T13:11:48.568+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T13:11:48.585+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T13:11:48.592+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmpxlwxbr32']
+[2025-12-17T13:11:48.595+0000] {standard_task_runner.py:91} INFO - Job 29: Subtask debug_env_and_paths
+[2025-12-17T13:11:48.595+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1404) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:11:48.597+0000] {standard_task_runner.py:63} INFO - Started process 1405 to run task
+[2025-12-17T13:11:48.663+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host 84fc30c39b31
+[2025-12-17T13:11:48.768+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T13:11:48.769+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:11:48.785+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T13:11:48.786+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T13:11:48.795+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T13:11:48.798+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmpqa0g_td5
+[2025-12-17T13:11:48.799+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T13:11:48.810+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T13:11:48.811+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T13:11:48.813+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 12:55 ..
+[2025-12-17T13:11:48.813+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  668 Dec 17 13:03 dbt_project.yml
+[2025-12-17T13:11:48.814+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T13:11:48.814+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T13:11:48.815+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T13:11:48.815+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T13:11:48.819+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T13:11:48.820+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T13:11:48.820+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 12:55 ..
+[2025-12-17T13:11:48.821+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T13:11:48.822+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  458 Dec 17 13:07 profiles.yml
+[2025-12-17T13:11:48.826+0000] {subprocess.py:93} INFO - /home/***/.local/bin/dbt
+[2025-12-17T13:11:52.485+0000] {subprocess.py:93} INFO - Core:
+[2025-12-17T13:11:52.486+0000] {subprocess.py:93} INFO -   - installed: 1.8.4
+[2025-12-17T13:11:52.486+0000] {subprocess.py:93} INFO -   - latest:    1.10.16 - Update available!
+[2025-12-17T13:11:52.487+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:11:52.488+0000] {subprocess.py:93} INFO -   Your version of dbt-core is out of date!
+[2025-12-17T13:11:52.488+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T13:11:52.489+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T13:11:52.489+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:11:52.490+0000] {subprocess.py:93} INFO - Plugins:
+[2025-12-17T13:11:52.490+0000] {subprocess.py:93} INFO -   - snowflake: 1.8.4 - Update available!
+[2025-12-17T13:11:52.491+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:11:52.492+0000] {subprocess.py:93} INFO -   At least one plugin is out of date or incompatible with dbt-core.
+[2025-12-17T13:11:52.492+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T13:11:52.493+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T13:11:52.494+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:11:52.494+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:11:52.788+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T13:11:52.789+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T13:11:52.790+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T13:11:52.790+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T13:11:52.791+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T13:11:52.792+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T13:11:52.793+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T13:11:52.793+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T13:11:52.794+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:11:52.834+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T131148, end_date=20251217T131152
+[2025-12-17T13:11:52.871+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T13:11:52.937+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T13:11:52.944+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-12-17T13:45:23.432+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-17T13:45:23.470+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T13:45:23.481+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [queued]>
+[2025-12-17T13:45:23.481+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2025-12-17T13:45:23.500+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): debug_env_and_paths> on 2025-12-16 05:00:00+00:00
+[2025-12-17T13:45:23.507+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mfg_raw_ingestion_dag', 'debug_env_and_paths', 'scheduled__2025-12-16T05:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/mfg_raw_ingestion_dag.py', '--cfg-path', '/tmp/tmp6n9qrgpj']
+[2025-12-17T13:45:23.511+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask debug_env_and_paths
+[2025-12-17T13:45:23.511+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=306) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-17T13:45:23.512+0000] {standard_task_runner.py:63} INFO - Started process 307 to run task
+[2025-12-17T13:45:23.578+0000] {task_command.py:426} INFO - Running <TaskInstance: mfg_raw_ingestion_dag.debug_env_and_paths scheduled__2025-12-16T05:00:00+00:00 [running]> on host 8717822a88d5
+[2025-12-17T13:45:23.681+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-eng' AIRFLOW_CTX_DAG_ID='mfg_raw_ingestion_dag' AIRFLOW_CTX_TASK_ID='debug_env_and_paths' AIRFLOW_CTX_EXECUTION_DATE='2025-12-16T05:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-16T05:00:00+00:00'
+[2025-12-17T13:45:23.682+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-17T13:45:23.698+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-17T13:45:23.699+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n    set -e\n    echo "PWD=$(pwd)"\n    echo "DBT_DIR=/opt/***/dbt_project"\n    ls -la /opt/***/dbt_project\n    echo "DBT_PROFILES_DIR=/opt/***/dbt_profiles"\n    ls -la /opt/***/dbt_profiles\n    which dbt || true\n    dbt --version || true\n    env | grep -E \'^SNOWFLAKE_\' || true\n    ']
+[2025-12-17T13:45:23.708+0000] {subprocess.py:86} INFO - Output:
+[2025-12-17T13:45:23.710+0000] {subprocess.py:93} INFO - PWD=/tmp/***tmpjpclfru8
+[2025-12-17T13:45:23.711+0000] {subprocess.py:93} INFO - DBT_DIR=/opt/***/dbt_project
+[2025-12-17T13:45:23.724+0000] {subprocess.py:93} INFO - total 8
+[2025-12-17T13:45:23.724+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 17 13:35 .
+[2025-12-17T13:45:23.727+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 13:44 ..
+[2025-12-17T13:45:23.727+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  644 Dec 17 13:37 dbt_project.yml
+[2025-12-17T13:45:23.728+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 logs
+[2025-12-17T13:45:23.728+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 17 13:36 macros
+[2025-12-17T13:45:23.729+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 models
+[2025-12-17T13:45:23.729+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 target
+[2025-12-17T13:45:23.730+0000] {subprocess.py:93} INFO - DBT_PROFILES_DIR=/opt/***/dbt_profiles
+[2025-12-17T13:45:23.733+0000] {subprocess.py:93} INFO - total 4
+[2025-12-17T13:45:23.733+0000] {subprocess.py:93} INFO - drwxrwxrwx 1 root    root 4096 Dec 16 23:07 .
+[2025-12-17T13:45:23.735+0000] {subprocess.py:93} INFO - drwxrwxr-x 1 *** root 4096 Dec 17 13:44 ..
+[2025-12-17T13:45:23.741+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root   41 Dec 13 17:23 .user.yml
+[2025-12-17T13:45:23.741+0000] {subprocess.py:93} INFO - -rwxrwxrwx 1 root    root  457 Dec 17 13:35 profiles.yml
+[2025-12-17T13:45:23.742+0000] {subprocess.py:93} INFO - /home/***/.local/bin/dbt
+[2025-12-17T13:45:27.356+0000] {subprocess.py:93} INFO - Core:
+[2025-12-17T13:45:27.357+0000] {subprocess.py:93} INFO -   - installed: 1.8.4
+[2025-12-17T13:45:27.358+0000] {subprocess.py:93} INFO -   - latest:    1.10.16 - Update available!
+[2025-12-17T13:45:27.358+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:45:27.359+0000] {subprocess.py:93} INFO -   Your version of dbt-core is out of date!
+[2025-12-17T13:45:27.360+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T13:45:27.360+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T13:45:27.361+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:45:27.361+0000] {subprocess.py:93} INFO - Plugins:
+[2025-12-17T13:45:27.362+0000] {subprocess.py:93} INFO -   - snowflake: 1.8.4 - Update available!
+[2025-12-17T13:45:27.362+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:45:27.363+0000] {subprocess.py:93} INFO -   At least one plugin is out of date or incompatible with dbt-core.
+[2025-12-17T13:45:27.364+0000] {subprocess.py:93} INFO -   You can find instructions for upgrading here:
+[2025-12-17T13:45:27.364+0000] {subprocess.py:93} INFO -   https://docs.getdbt.com/docs/installation
+[2025-12-17T13:45:27.365+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:45:27.366+0000] {subprocess.py:93} INFO - 
+[2025-12-17T13:45:27.631+0000] {subprocess.py:93} INFO - SNOWFLAKE_WAREHOUSE=WH_MFG_ACCELERATOR
+[2025-12-17T13:45:27.632+0000] {subprocess.py:93} INFO - SNOWFLAKE_PASSWORD=Calmdownn.1998
+[2025-12-17T13:45:27.633+0000] {subprocess.py:93} INFO - SNOWFLAKE_ACCOUNT=DTWDUSN-WRB63753
+[2025-12-17T13:45:27.634+0000] {subprocess.py:93} INFO - SNOWFLAKE_DATABASE=MFG_ACCELERATOR
+[2025-12-17T13:45:27.635+0000] {subprocess.py:93} INFO - SNOWFLAKE_ROLE=ACCOUNTADMIN
+[2025-12-17T13:45:27.635+0000] {subprocess.py:93} INFO - SNOWFLAKE_SCHEMA=RAW
+[2025-12-17T13:45:27.636+0000] {subprocess.py:93} INFO - SNOWFLAKE_USER=TAIBKHO44
+[2025-12-17T13:45:27.637+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-17T13:45:27.639+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-17T13:45:27.676+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=mfg_raw_ingestion_dag, task_id=debug_env_and_paths, execution_date=20251216T050000, start_date=20251217T134523, end_date=20251217T134527
+[2025-12-17T13:45:27.705+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-17T13:45:27.733+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-17T13:45:27.738+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
