@@ -1,99 +1,99 @@
 
 # Manufacturing Data Platform
 
-**Snowflake · dbt · Airflow · Docker**
+**Snowflake · Airflow · dbt · Docker · AWS · Terraform · Kubernetes · GitHub Actions**
 
-Production-inspired manufacturing data platform demonstrating how **reliable, testable, and observable data pipelines** are built and evolved in real environments.
+Production-inspired data platform demonstrating how a **data product evolves into a cloud-native, DevOps-operated system** with CI/CD, Infrastructure-as-Code, security, and observability.
 
-This repository intentionally shows **design iteration**, starting from a simple ingestion model and evolving toward a production-grade, run-aware architecture.
+The repository intentionally shows **design maturity over time**, from a simple local setup to a cloud-ready, production-grade platform.
 
 ---
 
 ## What this project demonstrates
 
-* End-to-end orchestration with **Airflow** (Docker, LocalExecutor, Postgres metadata)
-* Cloud data ingestion into **Snowflake**
-* Layered transformations and testing with **dbt**
-* Data quality monitoring and audit logging
-* Production engineering principles: idempotency, traceability, configuration isolation
+* End-to-end **DevOps ownership**: build → test → deploy → observe
+* **Infrastructure as Code** with Terraform (AWS)
+* **CI/CD pipelines** using GitHub Actions (YAML)
+* **Containerized workloads** and Kubernetes deployment patterns
+* **Secure cloud authentication** using GitHub OIDC (no long-lived secrets)
+* **Data platform engineering** with Airflow, dbt, and Snowflake
+* Production principles: idempotency, traceability, auditing, and separation of concerns
 
 ---
 
-## Architecture (high level)
+## High-level architecture
 
-Local, prod-like setup using **Docker + Airflow**, loading into **Snowflake**.
+* **Ingestion**: Python services (run-aware, auditable)
+* **Orchestration**: Airflow
+* **Transformation**: dbt (staging → core → marts)
+* **Storage**:
 
-### Ingestion (Python)
+  * Object storage: AWS S3
+  * Warehouse: Snowflake
+* **Runtime**:
 
-* Reads source CSVs from `data/raw/source_system`
-* Loads into Snowflake **RAW tables**
-* Uses **TRUNCATE + reload** to ensure idempotent daily loads
-* Ingestion history written to `RAW.RAW_LOAD_AUDIT`
+  * Local: Docker / kind
+  * Cloud-ready: Kubernetes
+* **DevOps layer**:
 
-### Transformations (dbt)
-
-* **STAGING**: type casting, cleaning, naming standardization
-* **CORE**: integrated entities and fact-like models
-* **MARTS**: business KPIs and ML-ready datasets
-* Schema tests: `unique`, `not_null`, `relationships`
-
-### Orchestration & Monitoring (Airflow)
-
-* Airflow runs in Docker with Postgres metadata DB
-* Project mounted at `/opt/airflow`
-* Environment variables injected via `.env` and Docker `env_file`
-* Data quality checks logged to `RAW.DATA_QUALITY_AUDIT`
+  * GitHub Actions (CI/CD)
+  * Terraform (AWS infra)
+  * ECR (container registry)
+  * IAM + OIDC (secure auth)
+  * Monitoring & quality checks
 
 ---
 
-## Snowflake data layers
+## Repository evolution 
 
-* **RAW**
-  Source tables loaded from CSV + audit tables
-* **STAGING**
-  Cleaned, standardized views
-* **CORE**
-  Integrated entities and facts
-* **MARTS**
-  Business KPIs and ML-ready datasets
+This repository is structured to show **how real platforms evolve**, not just a final snapshot.
 
----
+### v1 — Local baseline (`main`)
 
-## Design evolution (intentional)
+* TRUNCATE + reload ingestion
+* Dockerized Airflow
+* Snowflake RAW → STAGING → CORE → MARTS
+* dbt tests and audit tables
+* Focus: correctness, simplicity, fast iteration
 
-This project demonstrates how ingestion strategies evolve as operational needs increase.
+### v2 — Run-aware ingestion (`v2_run_aware`)
 
-### v1 — TRUNCATE + reload (**main branch**)
-
-* Simple and predictable ingestion pattern
-* Works well for small to medium data volumes
-* Easy to test and reason about
-* Used as the **baseline implementation**
-
-### v2 — Run-aware ingestion (**`v2_run_aware` branch**)
-
-* Immutable, run-partitioned RAW tables
+* Immutable RAW_RUN tables
 * Deterministic `LOAD_ID` (`dag_id::run_id`)
-* Safe retries and backfills without data loss
-* Full lineage and traceability per Airflow run
-* Consumer-friendly RAW views always point to the latest successful load
+* Safe retries and backfills
+* Full lineage and traceability per run
+* Consumer-friendly RAW views
 
-> The `v2_run_aware` branch represents the **production-grade evolution**
-> after identifying the limitations of TRUNCATE-based ingestion.
+### v3 — Cloud-native DevOps platform (`v3_cloud`)
+
+* AWS infrastructure provisioned via **Terraform**
+* S3 for raw/artifact storage
+* ECR for container images
+* GitHub Actions with **OIDC-based AWS access**
+* CI pipelines with linting, testing, security scans
+* Kubernetes deployment patterns (kind locally, EKS-ready)
+* Foundations for monitoring, GitOps, SecOps, and FinOps
 
 ---
 
-## Airflow DAGs
+## DevOps & Cloud highlights (v3_cloud)
 
-* **Raw ingestion + full build**
-* **dbt-only transformations**
-* **Data quality monitoring** (row counts, duplicates, freshness)
+* **CI/CD**: GitHub Actions (lint, test, SAST, container scanning)
+* **IaC**: Terraform modules for AWS (S3, ECR, IAM, OIDC)
+* **Security**:
+
+  * No AWS secrets in CI
+  * Least-privilege IAM
+  * Static and dependency scanning
+* **Containers**: Docker images pushed to ECR
+* **Kubernetes**: Declarative manifests, GitOps-style structure
+* **Auditability**: Ingestion and data-quality logs persisted in Snowflake
 
 ---
 
-## Run locally
+## Run locally (v1 / v2)
 
-1. Create `.env` at repo root with `SNOWFLAKE_*` variables (do not commit)
+1. Create `.env` with `SNOWFLAKE_*` variables (do not commit)
 2. Start Airflow:
 
    ```bash
@@ -105,5 +105,4 @@ This project demonstrates how ingestion strategies evolve as operational needs i
    * `mfg_raw_ingestion_dag`
    * `mfg_dbt_transform_dag`
    * `mfg_data_quality_monitoring_dag`
-
 
